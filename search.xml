@@ -3,7 +3,10 @@
   <entry>
     <title><![CDATA[vim+插件实现markdown功能]]></title>
     <url>%2F2018%2F05%2F11%2Fvim-%E6%8F%92%E4%BB%B6%E5%AE%9E%E7%8E%B0markdown%E5%8A%9F%E8%83%BD%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[vim-插件实现markdown功能具体请参考：https://www.jianshu.com/p/44d31327f953 里面实现了从小白到搭建好markdown的所有过程。]]></content>
+      <tags>
+        <tag>markdown</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[Hello World]]></title>
