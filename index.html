@@ -354,8 +354,8 @@
       
         
           
-            <h5 id="1-this指针"><a href="#1-this指针" class="headerlink" title="1.this指针"></a>1.this指针</h5><p>举例如下：  </p>
-<pre><code>class Array
+            <h4 id="1-this指针-指向自身数据的指针"><a href="#1-this指针-指向自身数据的指针" class="headerlink" title="1.this指针: 指向自身数据的指针"></a>1.this指针: <em>指向自身数据的指针</em></h4><p>举例如下：</p>
+<pre><code>class Array          //代码1
 {
 public:
     Array(int _len){len = _len;}
@@ -364,7 +364,34 @@ public:
 private:
     int len;
 };
-</code></pre>
+</code></pre><p>这里数据成员和参数在表达相同意思时用的是不同的变量，<em>所以如果想用相同的变量就需要一个标记来区分该变量时数据成员还是参数</em>,即<strong>this指针</strong>。  </p>
+<pre><code>class Array          //代码2
+{
+ public:
+     Array(int len){this-&gt;len = len;}
+     int getlen(){return len;}
+     void setlen(int len){this-&gt;len = len;}
+ private:
+     int len;
+};
+</code></pre><p>这样，用this指针指明了数据成员，就可以用相同的变量来进行表示了。</p>
+<blockquote>
+<p>Question：为什么成员函数可以直接访问数据成员？  </p>
+</blockquote>
+<p><strong>知识准备</strong>: 对象结构<br>在进行对多个对象实例化的时候，在内存中会定义对应多个数据成员，但是成员函数只有一份，储存在代码区。而且每个对象进行调用的时候，每个对象都能够准确无误的进行调用。大家有没有想过这是为什么呢？<br><em>其实这就是this指针的功劳。</em> 我们来看下面这个例子：</p>
+<pre><code>class Array          //代码3
+{
+public:
+   Array(T *this,int _len){this-&gt;len = _len;}
+   int getlen(T *this){return this-&gt;len;}
+   void setlen(T *this,int _len){this-&gt;len = _len;}
+private:
+   int len;
+};
+</code></pre><p>大家是不是发现了和第一个例子的区别？其实就是每个成员函数都加了一个this指针，这样其实上面所提到的问题就迎刃而解了。<br>我们设想一下，当我们去实例化一个对象并使用他们的成员函数时，<strong>this指针就代表这个对象本身的地址</strong>，也就是说当我们调用成员函数时,编译器会悄悄地把代码1转换成代码3，所以每次调用成员函数，都是改变对应对象的成员变量。<br>上面说了，<em>编译器自动的为每个成员函数的参数列表都加了一个this指针</em><br>, Thus，我们只需要理解就可，没有必要自己显式的写出来。</p>
+<hr>
+<p><em>推荐视频</em>：<img src="https://www.imooc.com/video/8162" alt="如何理解this指针?"></p>
+
           
         
       
@@ -612,22 +639,22 @@ private:
         
           
             <h3 id="1-Markdown官方文档"><a href="#1-Markdown官方文档" class="headerlink" title="1.Markdown官方文档"></a>1.Markdown官方文档</h3><ul>
-<li><a href="https://www.appinn.com/markdown/" target="_blank" rel="noopener">官方文档详细版</a>  <h3 id="2-常用语法规则"><a href="#2-常用语法规则" class="headerlink" title="2.常用语法规则"></a>2.常用语法规则</h3><h4 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h4></li>
+<li><a href="https://www.appinn.com/markdown/" target="_blank" rel="noopener">官方文档详细版</a>  <h3 id="2-常用语法规则"><a href="#2-常用语法规则" class="headerlink" title="2.常用语法规则"></a>2.常用语法规则</h3><h4 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h4>i<br>共六级标题，用#的累计来进行区分，#号越少字号越大<br>下面给出相应代码，如图所示：<br><img src="/2018/05/11/markdown简单用法/1.png" alt="lll"><br><img src="/2018/05/11/markdown简单用法/9.png" alt="ll"></li>
 </ul>
-<p>共六级标题，用#的累计来进行区分，#号越少字号越大<br>下面给出相应代码，如图所示：<br><img src="/2018/05/11/markdown简单用法/1.png" alt="lll"><br><img src="/2018/05/11/markdown简单用法/9.png" alt="ll"></p>
 <h4 id="换行和分段"><a href="#换行和分段" class="headerlink" title="换行和分段"></a>换行和分段</h4><ul>
 <li>换行：只需要在行末加两个空格键和一个回车  </li>
-<li><p>分段：段落之间空一行即可<br><img src="/2018/05/11/markdown简单用法/2.png" alt="换行和分段">  </p>
-<h4 id="文本样式"><a href="#文本样式" class="headerlink" title="文本样式"></a>文本样式</h4></li>
-<li><p>加粗: <strong>加粗</strong></p>
-</li>
+<li>分段：段落之间空一行即可<br><img src="/2018/05/11/markdown简单用法/2.png" alt="换行和分段">  </li>
+</ul>
+<h4 id="文本样式"><a href="#文本样式" class="headerlink" title="文本样式"></a>文本样式</h4><ul>
+<li>加粗: <strong>加粗</strong></li>
 <li>斜体: <em>斜体</em></li>
 <li>删除线: <del>删除线</del></li>
-<li>底纹: <code>底纹</code><br><img src="/2018/05/11/markdown简单用法/3.png" alt="style">  <h4 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h4>只要将文本内容之前加[ &gt;(大于号) ]即可将文本变成引用文本。<blockquote>
+<li>底纹: <code>底纹</code><br><img src="/2018/05/11/markdown简单用法/3.png" alt="style">  </li>
+</ul>
+<h4 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h4><p>只要将文本内容之前加[ &gt;(大于号) ]即可将文本变成引用文本。</p>
+<blockquote>
 <p>我是引用文本  </p>
 </blockquote>
-</li>
-</ul>
 <p><img src="/2018/05/11/markdown简单用法/4.png" alt="引用">  </p>
 <h4 id="图片和链接"><a href="#图片和链接" class="headerlink" title="图片和链接"></a>图片和链接</h4><ul>
 <li><strong>图片格式</strong>: ! [图片描述] (链接的地址)  </li>
@@ -635,8 +662,9 @@ private:
 <li>如果是本地的图片可以参考: <a href="https://blog.csdn.net/sugar_rainbow/article/details/57415705" target="_blank" rel="noopener">hexo生成blog本地图片插入方法</a>  <blockquote>
 <p><em>实际用时在 感叹号，中括号和小括号 之间不能有空格，这里只是为了展示效果</em></p>
 </blockquote>
-<h4 id="水平线"><a href="#水平线" class="headerlink" title="水平线"></a>水平线</h4>三个[ - ]或者[ * ]都可以画出一条水平分割线 </li>
+</li>
 </ul>
+<h4 id="水平线"><a href="#水平线" class="headerlink" title="水平线"></a>水平线</h4><p>三个[ - ]或者[ * ]都可以画出一条水平分割线 </p>
 <hr>
 <hr>
 <p>实现方式: <img src="/2018/05/11/markdown简单用法/5.png" alt="水平线">  </p>
