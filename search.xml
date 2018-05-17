@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Cpp-封装篇]]></title>
+    <url>%2F2018%2F05%2F17%2FCpp-%E5%B0%81%E8%A3%85%E7%AF%87%2F</url>
+    <content type="text"><![CDATA[1.this指针举例如下： class Array { public: Array(int _len){len = _len;} int getlen(){return len;} void setlen(int _len){len = _len;} private: int len; };]]></content>
+      <tags>
+        <tag>C++面向对象</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Hello World]]></title>
     <url>%2F2018%2F05%2F12%2Fhello-world%2F</url>
     <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
@@ -11,7 +19,7 @@
   <entry>
     <title><![CDATA[markdown简单用法]]></title>
     <url>%2F2018%2F05%2F11%2Fmarkdown%E7%AE%80%E5%8D%95%E7%94%A8%E6%B3%95%2F</url>
-    <content type="text"><![CDATA[1.Markdown官方文档 官方文档详细版 2.常用语法规则标题共六级标题，用#的累计来进行区分，#号越少字号越大下面给出相应代码，如图所示：换行和分段 换行：只需要在行末加两个空格键和一个回车 分段：段落之间空一行即可 文本样式 加粗: 加粗 斜体: 斜体 删除线: 删除线 底纹: 底纹 引用只要将文本内容之前加[ &gt;(大于号) ]即可将文本变成引用文本。 我是引用文本 图片和链接 图片格式: ! [图片描述] (链接的地址) 链接: [文本内容] (链接的地址) 如果是本地的图片可以参考: hexo生成blog本地图片插入方法 实际用时在 感叹号，中括号和小括号 之间不能有空格，这里只是为了展示效果。水平线三个[ - ]或者[ * ]都可以画出一条水平分割线 实现方式: 表格在markdown制作表格非常麻烦，必须要画出来！！！ 脚注脚注成对出现，[^1]作为标记，可以点击调至末尾注解。[^1]填写注解，不论写在什么位置，都会出现在文章的末尾。 注释注释是给自己看的，预览和发布时都不会出现。 end: 暂时先总结这些，实现了最基础的一些功能,能满足大家的一定需要，对markdown有兴趣却还没有基础的小白可以看看，大神请绕道，等日后再慢慢更新… 特别感谢：https://www.jianshu.com/p/0130ad32a08d]]></content>
+    <content type="text"><![CDATA[1.Markdown官方文档 官方文档详细版 2.常用语法规则标题 共六级标题，用#的累计来进行区分，#号越少字号越大下面给出相应代码，如图所示： 换行和分段 换行：只需要在行末加两个空格键和一个回车 分段：段落之间空一行即可 文本样式 加粗: 加粗 斜体: 斜体 删除线: 删除线 底纹: 底纹 引用只要将文本内容之前加[ &gt;(大于号) ]即可将文本变成引用文本。 我是引用文本 图片和链接 图片格式: ! [图片描述] (链接的地址) 链接: [文本内容] (链接的地址) 如果是本地的图片可以参考: hexo生成blog本地图片插入方法 实际用时在 感叹号，中括号和小括号 之间不能有空格，这里只是为了展示效果 水平线三个[ - ]或者[ * ]都可以画出一条水平分割线 实现方式: 表格在markdown制作表格非常麻烦，必须要画出来！！！ 脚注脚注成对出现，[^1]作为标记，可以点击调至末尾注解。[^1]填写注解，不论写在什么位置，都会出现在文章的末尾。 注释注释是给自己看的，预览和发布时都不会出现。 end: 暂时先总结这些，实现了最基础的一些功能,能满足大家的一定需要，对markdown有兴趣却还没有基础的小白可以看看，大神请绕道，等日后再慢慢更新… 5月16日补充： 代码框的三种形式 两对’’’包裹 代码前面加两个空格键 代码前面加一个TAB键 特别感谢：https://www.jianshu.com/p/0130ad32a08d]]></content>
       <tags>
         <tag>markdown</tag>
       </tags>
