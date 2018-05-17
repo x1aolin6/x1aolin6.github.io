@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="x1aolin">
 <meta property="og:description" content="1.this指针: 指向自身数据的指针举例如下： class Array          //代码1 { public:     Array(int _len){len = _len;}     int getlen(){return len;}     void setlen(int _len){len = _len;} private:     int len; }; 这里数据成员和参数在表">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-17T05:03:28.771Z">
+<meta property="og:updated_time" content="2018-05-17T05:06:18.859Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Cpp-封装篇之This指针">
 <meta name="twitter:description" content="1.this指针: 指向自身数据的指针举例如下： class Array          //代码1 { public:     Array(int _len){len = _len;}     int getlen(){return len;}     void setlen(int _len){len = _len;} private:     int len; }; 这里数据成员和参数在表">
@@ -389,7 +389,9 @@ private:
    int len;
 };
 </code></pre><p>大家是不是发现了和第一个例子的区别？显而易见，就是每个成员函数都加了一个this指针，这样上面所提到的问题就迎刃而解了。<br>我们设想一下，当我们去实例化一个对象并使用他们的成员函数时，<strong>this指针就代表这个对象本身的地址</strong>，也就是说当我们调用成员函数时,编译器会悄悄地把代码1转换成代码3，所以每次调用成员函数，都是改变对应对象的成员变量。  </p>
-<h2 id="上面说了，编译器自动的为每个成员函数的参数列表都加了一个this指针-Thus，我们只需要理解就可，没有必要自己显式的写出来。"><a href="#上面说了，编译器自动的为每个成员函数的参数列表都加了一个this指针-Thus，我们只需要理解就可，没有必要自己显式的写出来。" class="headerlink" title="上面说了，编译器自动的为每个成员函数的参数列表都加了一个this指针, Thus，我们只需要理解就可，没有必要自己显式的写出来。"></a>上面说了，<em>编译器自动的为每个成员函数的参数列表都加了一个this指针</em>, Thus，我们只需要理解就可，没有必要自己显式的写出来。</h2><p><em>推荐视频</em>：<a href="https://www.imooc.com/video/8162" target="_blank" rel="noopener">如何理解this指针?</a></p>
+<p>上面说了，<em>编译器自动的为每个成员函数的参数列表都加了一个this指针</em>, Thus，我们只需要理解就可，没有必要自己显式的写出来。</p>
+<hr>
+<p><em>推荐视频</em>：<a href="https://www.imooc.com/video/8162" target="_blank" rel="noopener">如何理解this指针?</a></p>
 <blockquote>
 <p>Tips: 看视频需要注册账号，只有注册登录才可以看视频。</p>
 </blockquote>
@@ -553,7 +555,7 @@ private:
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-this指针-指向自身数据的指针"><span class="nav-number">1.</span> <span class="nav-text">1.this指针: 指向自身数据的指针</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#上面说了，编译器自动的为每个成员函数的参数列表都加了一个this指针-Thus，我们只需要理解就可，没有必要自己显式的写出来。"><span class="nav-number"></span> <span class="nav-text">上面说了，编译器自动的为每个成员函数的参数列表都加了一个this指针, Thus，我们只需要理解就可，没有必要自己显式的写出来。</span></a></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-this指针-指向自身数据的指针"><span class="nav-number">1.</span> <span class="nav-text">1.this指针: 指向自身数据的指针</span></a></li></ol></div>
             
 
           </div>
