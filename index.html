@@ -354,41 +354,14 @@
       
         
           
-            <h4 id="1-this指针-指向自身数据的指针"><a href="#1-this指针-指向自身数据的指针" class="headerlink" title="1.this指针: 指向自身数据的指针"></a>1.this指针: <em>指向自身数据的指针</em></h4><p>举例如下：</p>
-<pre><code>class Array          //代码1
-{
-public:
-    Array(int _len){len = _len;}
-    int getlen(){return len;}
-    void setlen(int _len){len = _len;}
-private:
-    int len;
-};
-</code></pre><p>这里数据成员和参数在表达相同意思时用的是不同的变量，<em>所以如果想用相同的变量就需要一个标记来区分该变量时数据成员还是参数</em>,即<strong>this指针</strong>。  </p>
-<pre><code>class Array          //代码2
-{
- public:
-     Array(int len){this-&gt;len = len;}
-     int getlen(){return len;}
-     void setlen(int len){this-&gt;len = len;}
- private:
-     int len;
-};
-</code></pre><p>这样，用this指针指明了数据成员，就可以用相同的变量来进行表示了。</p>
+            <h4 id="1-this指针-指向自身数据的指针"><a href="#1-this指针-指向自身数据的指针" class="headerlink" title="1.this指针: 指向自身数据的指针"></a>1.this指针: <em>指向自身数据的指针</em></h4><p>举例如下：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Array</span>          //代码1</span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	Array(<span class="keyword">int</span> _len)&#123;len = _len;&#125;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">getlen</span><span class="params">()</span></span>&#123;<span class="keyword">return</span> len;&#125;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">setlen</span><span class="params">(<span class="keyword">int</span> _len)</span></span>&#123;len = _len;&#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	<span class="keyword">int</span> len;</span><br><span class="line">	&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>这里数据成员和参数在表达相同意思时用的是不同的变量，<em>所以如果想用相同的变量就需要一个标记来区分该变量时数据成员还是参数</em>,即<strong>this指针</strong>。<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Array</span>          //代码2</span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">     Array(<span class="keyword">int</span> len)&#123;<span class="keyword">this</span>-&gt;len = len;&#125;</span><br><span class="line">     <span class="function"><span class="keyword">int</span> <span class="title">getlen</span><span class="params">()</span></span>&#123;<span class="keyword">return</span> len;&#125;</span><br><span class="line">     <span class="function"><span class="keyword">void</span> <span class="title">setlen</span><span class="params">(<span class="keyword">int</span> len)</span></span>&#123;<span class="keyword">this</span>-&gt;len = len;&#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">     <span class="keyword">int</span> len;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>这样，用this指针指明了数据成员，就可以用相同的变量来进行表示了。</p>
 <blockquote>
 <p>Question：为什么成员函数可以直接访问数据成员？  </p>
 </blockquote>
-<p><strong>知识准备</strong>: 对象结构<br>在进行对多个对象实例化的时候，在内存中会定义对应多个数据成员，但是成员函数只有一份，储存在代码区。而且每个对象进行调用的时候，每个对象都能够准确无误的进行调用。大家有没有想过这是为什么呢？<br><em>其实这就是this指针的功劳。</em> 我们来看下面这个例子：</p>
-<pre><code>class Array          //代码3
-{
-public:
-   Array(T *this,int _len){this-&gt;len = _len;}
-   int getlen(T *this){return this-&gt;len;}
-   void setlen(T *this,int _len){this-&gt;len = _len;}
-private:
-   int len;
-};
-</code></pre><p>大家是不是发现了和第一个例子的区别？显而易见，就是每个成员函数都加了一个this指针，这样上面所提到的问题就迎刃而解了。<br>我们设想一下，当我们去实例化一个对象并使用他们的成员函数时，<strong>this指针就代表这个对象本身的地址</strong>，也就是说当我们调用成员函数时,编译器会悄悄地把代码1转换成代码3，所以每次调用成员函数，都是改变对应对象的成员变量。  </p>
+<p><strong>知识准备</strong>: 对象结构<br>在进行对多个对象实例化的时候，在内存中会定义对应多个数据成员，但是成员函数只有一份，储存在代码区。而且每个对象进行调用的时候，每个对象都能够准确无误的进行调用。大家有没有想过这是为什么呢？<br><em>其实这就是this指针的功劳。</em> 我们来看下面这个例子：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Array</span>          //代码3</span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">   Array(T *<span class="keyword">this</span>,<span class="keyword">int</span> _len)&#123;<span class="keyword">this</span>-&gt;len = _len;&#125;</span><br><span class="line">   <span class="function"><span class="keyword">int</span> <span class="title">getlen</span><span class="params">(T *<span class="keyword">this</span>)</span></span>&#123;<span class="keyword">return</span> <span class="keyword">this</span>-&gt;len;&#125;</span><br><span class="line">   <span class="function"><span class="keyword">void</span> <span class="title">setlen</span><span class="params">(T *<span class="keyword">this</span>,<span class="keyword">int</span> _len)</span></span>&#123;<span class="keyword">this</span>-&gt;len = _len;&#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">   <span class="keyword">int</span> len;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>大家是不是发现了和第一个例子的区别？显而易见，就是每个成员函数都加了一个this指针，这样上面所提到的问题就迎刃而解了。<br>我们设想一下，当我们去实例化一个对象并使用他们的成员函数时，<strong>this指针就代表这个对象本身的地址</strong>，也就是说当我们调用成员函数时,编译器会悄悄地把代码1转换成代码3，所以每次调用成员函数，都是改变对应对象的成员变量。  </p>
 <p>上面说了，<em>编译器自动的为每个成员函数的参数列表都加了一个this指针</em>, Thus，我们只需要理解就可，没有必要自己显式的写出来。</p>
 <hr>
 <p><em>推荐视频</em>：<a href="https://www.imooc.com/video/8162" target="_blank" rel="noopener">如何理解this指针?</a></p>
@@ -689,6 +662,10 @@ private:
 <li>代码前面加两个<strong>空格键</strong></li>
 <li>代码前面加一个<strong>TAB键</strong><br><img src="/2018/05/11/markdown简单用法/10.png" alt="代码框">  </li>
 </ul>
+<blockquote>
+<p>让hexo代码高亮格式：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;```语言名 （比如cpp）  </span><br><span class="line">&gt;    #include &lt; iostream&gt;</span><br><span class="line">&gt;    using namespace std;</span><br><span class="line">&gt;    ...</span><br><span class="line">&gt;``` //第一行说明语言，下面是代码内容</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>点击这里可以查看<a href="http://highlightjs.readthedocs.io/en/latest/css-classes-reference.html" target="_blank" rel="noopener">代码高亮支持格式和化名</a></p>
 <hr>
 <p>特别感谢：<a href="https://www.jianshu.com/p/0130ad32a08d" target="_blank" rel="noopener">https://www.jianshu.com/p/0130ad32a08d</a></p>
 
