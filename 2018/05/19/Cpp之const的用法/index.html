@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="关于const的有关知识今天先讲这些，等日后再进行补充……Tips:最后有视频推荐链接，不喜欢读文章可以看看视频。  控制变化的const 1.const与基本的数据类型如:1const int x = 3 //常量    变量名 储存地址 存储内容     x &amp;amp;x 3  固定不变    2.const与指针类型五种定义形式:123456789const int *p = NULL;">
+<meta name="description" content="关于const的有关知识今天先讲这些，等日后再进行补充……Tips:最后有视频推荐链接，不喜欢读文章可以看看视频。  控制变化的const 1.const与基本的数据类型如:1const int x = 3 //常量    变量名 储存地址 存储内容     x &amp;amp;x 3  固定不变">
 <meta name="keywords" content="C++面向对象">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Cpp之const的用法">
 <meta property="og:url" content="http://yoursite.com/2018/05/19/Cpp之const的用法/index.html">
 <meta property="og:site_name" content="x1aolin">
-<meta property="og:description" content="关于const的有关知识今天先讲这些，等日后再进行补充……Tips:最后有视频推荐链接，不喜欢读文章可以看看视频。  控制变化的const 1.const与基本的数据类型如:1const int x = 3 //常量    变量名 储存地址 存储内容     x &amp;amp;x 3  固定不变    2.const与指针类型五种定义形式:123456789const int *p = NULL;">
+<meta property="og:description" content="关于const的有关知识今天先讲这些，等日后再进行补充……Tips:最后有视频推荐链接，不喜欢读文章可以看看视频。  控制变化的const 1.const与基本的数据类型如:1const int x = 3 //常量    变量名 储存地址 存储内容     x &amp;amp;x 3  固定不变">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-20T08:17:58.613Z">
+<meta property="og:updated_time" content="2018-05-20T09:16:32.562Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Cpp之const的用法">
-<meta name="twitter:description" content="关于const的有关知识今天先讲这些，等日后再进行补充……Tips:最后有视频推荐链接，不喜欢读文章可以看看视频。  控制变化的const 1.const与基本的数据类型如:1const int x = 3 //常量    变量名 储存地址 存储内容     x &amp;amp;x 3  固定不变    2.const与指针类型五种定义形式:123456789const int *p = NULL;">
+<meta name="twitter:description" content="关于const的有关知识今天先讲这些，等日后再进行补充……Tips:最后有视频推荐链接，不喜欢读文章可以看看视频。  控制变化的const 1.const与基本的数据类型如:1const int x = 3 //常量    变量名 储存地址 存储内容     x &amp;amp;x 3  固定不变">
 
 
 
@@ -330,6 +330,17 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/05/19/Cpp之const的用法/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/05/19/Cpp之const的用法/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -375,6 +386,7 @@
 </tr>
 </tbody>
 </table>
+<a id="more"></a>
 <h4 id="2-const与指针类型"><a href="#2-const与指针类型" class="headerlink" title="2.const与指针类型"></a>2.const与指针类型</h4><p>五种定义形式:<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> *p = <span class="literal">NULL</span>;    <span class="comment">//1</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> <span class="keyword">const</span> *p = <span class="literal">NULL</span>;    <span class="comment">//2  1和2完全等价</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> *<span class="keyword">const</span> p = <span class="literal">NULL</span>;    <span class="comment">//3  另外一种情况</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> * <span class="keyword">const</span> p = <span class="literal">NULL</span>;  <span class="comment">//4 </span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> <span class="keyword">const</span> * <span class="keyword">const</span> p = <span class="literal">NULL</span>;  <span class="comment">//5  4和5完全等价</span></span><br></pre></td></tr></table></figure></p>
 <p>下面我们通过例子来说明问题：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> x = <span class="number">3</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> *p = &amp;x;    <span class="comment">/*</span></span><br><span class="line"><span class="comment">p = &amp;y; 正确,即允许让指针p再指向另外的一个地址。</span></span><br><span class="line"><span class="comment">*p = 4; 错误，因为我们的const此时修饰的是*p    */</span></span><br></pre></td></tr></table></figure></p>
 <table>
@@ -552,6 +564,16 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
 
   
 
@@ -823,6 +845,26 @@
 
   
 
+    
+      <script id="dsq-count-scr" src="https://xiaolin.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://yoursite.com/2018/05/19/Cpp之const的用法/';
+          this.page.identifier = '2018/05/19/Cpp之const的用法/';
+          this.page.title = 'Cpp之const的用法';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://xiaolin.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
 
 
 
@@ -835,10 +877,6 @@
   
 
 
-
-
-
-  
 
 
 
