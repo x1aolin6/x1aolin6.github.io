@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="x1aolin">
 <meta property="og:description" content="未完待续……  写在前面作者在写本文时，着重参考了CSDN博客作者陈皓的博客，在此表示十分感谢。  对于大多数用Windows学编程的同学也许不知道makefile这个东西，因为Windows的IDE为你做了这个工作。最近打算转战Unix系统，所以在被逼无奈之下，了解了一下makefile，在此写出同大家一起分享。  Question：什么是makefile？  makefile关系了整个工程的">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-21T02:27:36.801Z">
+<meta property="og:updated_time" content="2018-05-21T02:43:20.594Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="跟我一起学写makefile">
 <meta name="twitter:description" content="未完待续……  写在前面作者在写本文时，着重参考了CSDN博客作者陈皓的博客，在此表示十分感谢。  对于大多数用Windows学编程的同学也许不知道makefile这个东西，因为Windows的IDE为你做了这个工作。最近打算转战Unix系统，所以在被逼无奈之下，了解了一下makefile，在此写出同大家一起分享。  Question：什么是makefile？  makefile关系了整个工程的">
@@ -396,6 +396,7 @@
 <p>Question：什么是makefile？</p>
 </blockquote>
 <p>makefile关系了整个工程的编译规则，在一个工程中，源文件不计其数，其按照类型、功能、模块分别放在若干个目录中，makefile定义了一系列的规则来指定那个文件需要先编译，那个文件需要后编译，那些文件需要重新编译，甚至于更加复杂的功能操作，，这里的makefile就像是一个shell脚本一样，其中也可以执行操作的命令。</p>
+<a id="more"></a>
 <p>makefile带来的好处就是——“自动化编译”，一旦写好，只需要一个make命令，整个工程完全自动编译，极大的提高了软件开发的效率。make是一个命令工具，是一个解释makefile中指令的命令工具。</p>
 <h5 id="程序的编译和链接"><a href="#程序的编译和链接" class="headerlink" title="程序的编译和链接"></a>程序的编译和链接</h5><hr>
 <p>一般来说，无论是C，C++，还是pas，首先要把源文件编译成中间代码文件，Windows下为.obj文件，Unix下是.o文件，即 Object File，这个动作叫做编译(compile)。<br>然后再把大量的Object File合成可执行文件，这个动作叫做链接（link）。  </p>
