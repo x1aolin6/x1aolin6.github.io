@@ -12,5 +12,5 @@ Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
 
-Sitemap: https://www.x1aolin6.top/sitemap.xml
-Sitemap: https://www.x1aolin6.top/baidusitemap.xml
+Sitemap: http://www.x1aolin6.top/sitemap.xml
+Sitemap: http://www.x1aolin6.top/baidusitemap.xml
