@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="x1aolin">
 <meta property="og:description" content="说明: 关于编译环境，安装相应的IDE等相关知识本文不会介绍，请自行百度  标识符和关键字标识符定义 : 用来标识类名、变量名、方法名、类型名、数组名、文件名的有效字符序列。 语法规则 :(1) 由字母、下划线、美元符号$、数字构成，长度无限制。(2) 第一个字符不可以是数字字符。(3) 不可以是关键字(关键字会在后续说明)。(4) 不可以是true、false、null这三个字符。(5) Ja">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-26T08:52:45.251Z">
+<meta property="og:updated_time" content="2018-05-26T08:56:38.308Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java基本类型、数组和枚举类型(一)">
 <meta name="twitter:description" content="说明: 关于编译环境，安装相应的IDE等相关知识本文不会介绍，请自行百度  标识符和关键字标识符定义 : 用来标识类名、变量名、方法名、类型名、数组名、文件名的有效字符序列。 语法规则 :(1) 由字母、下划线、美元符号$、数字构成，长度无限制。(2) 第一个字符不可以是数字字符。(3) 不可以是关键字(关键字会在后续说明)。(4) 不可以是true、false、null这三个字符。(5) Ja">
@@ -447,7 +447,31 @@
 <p><em>说明</em> : 要观察一个字符在Unicode表中的顺序位置，可以使用int型显式转换，如<code>(int)&#39;a&#39;</code>或<code>int p = &#39;a&#39;</code>。如果要得到一个0~65536的数所代表的Unicode表中相应位置上的字符，需使用char显式转换，示例如下:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">        <span class="keyword">char</span> ch1 = <span class="string">'w'</span>,ch2 = <span class="string">'好'</span>;</span><br><span class="line">		<span class="keyword">int</span> p1 = <span class="number">32831</span>,p2 = <span class="number">30452</span>;</span><br><span class="line">		System.out.printIn(<span class="string">"\""</span>+ch1+<span class="string">"\"的位置:"</span>+(<span class="keyword">int</span>)ch1);</span><br><span class="line">		System.out.printIn(<span class="string">"\""</span>+ch2+<span class="string">"\"的位置:"</span>+(<span class="keyword">int</span>)ch2);</span><br><span class="line">		System.out.printIn(<span class="string">"第"</span>+p1+<span class="string">"个位置上的字符是:"</span>+(<span class="keyword">char</span>)p1);</span><br><span class="line">		System.out.printIn(<span class="string">"第"</span>+p2+<span class="string">"个位置上的字符是:"</span>+(<span class="keyword">char</span>)p2);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>有兴趣的同学可以在自己的编译器下跑跑试试。</p>
 <h4 id="浮点类型"><a href="#浮点类型" class="headerlink" title="浮点类型"></a>浮点类型</h4><h5 id="float型"><a href="#float型" class="headerlink" title="float型"></a>float型</h5><p>(1) float定义常量时，常量后面必须要有后缀f或F。<br>(2) float变量在存储float类型数据时保留8为有效数字，实际精度取决于具体数值。  </p>
-<h5 id="double型"><a href="#double型" class="headerlink" title="double型"></a>double型</h5><p>保留16位有效数字，实际精度取决于具体数值。其与float的比较如下:<br>|浮点类型|所占字节数|所占位数|取值范围|<br>|:—:|:—:|:—:|:—–:|<br>|float型|4|32|10<sup>-38</sup>~10<sup>38</sup>和-10<sup>38</sup>~10<sup>-38</sup>|<br>|double型|8|64|将上面38换成308|</p>
+<h5 id="double型"><a href="#double型" class="headerlink" title="double型"></a>double型</h5><p>保留16位有效数字，实际精度取决于具体数值。其与float的比较如下:  </p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">浮点类型</th>
+<th style="text-align:center">所占字节数</th>
+<th style="text-align:center">所占位数</th>
+<th style="text-align:center">取值范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">float型</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">32</td>
+<td style="text-align:center">10<sup>-38</sup>~10<sup>38</sup>和-10<sup>38</sup>~10<sup>-38</sup></td>
+</tr>
+<tr>
+<td style="text-align:center">double型</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">64</td>
+<td style="text-align:center">将上面38换成308</td>
+</tr>
+</tbody>
+</table>
 <h4 id="基本数据类型的转换"><a href="#基本数据类型的转换" class="headerlink" title="基本数据类型的转换"></a>基本数据类型的转换</h4><ul>
 <li>将上述类型按照精度从低到高排序为 byte,short,char,int,long,float,double</li>
 <li>当把级别低的变量的值=&gt;级别高的变量时，系统会自动完成数据类型的转换。</li>
