@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[test]]></title>
+    <url>%2F2018%2F05%2F27%2Ftest%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
     <title><![CDATA[Java从命令行输入和输出数据]]></title>
     <url>%2F2018%2F05%2F26%2FJava%E4%BB%8E%E5%91%BD%E4%BB%A4%E8%A1%8C%E8%BE%93%E5%85%A5%E5%92%8C%E8%BE%93%E5%87%BA%E6%95%B0%E6%8D%AE%2F</url>
     <content type="text"><![CDATA[输入基本型数据 在Java基本类型、数组和枚举类型(一) 中提到，Java程序都是由若干个类组成的，所以输入也是一个类。 Scanner类Scanner类用与创建一个对象:Scanner reader = new Scanner(System.in) 然后reader对象可通过以下函数对应读取用户在命令行输入的各种基本类型:nextBoolean(),nextByte(),nexyShort(),nextInt(),nextLong(),nextFloat(),nextDouble() 注意：上述方法在执行时都会发生堵塞，程序等待用户在命令行输入数据并按Enter确认。 下面通过一个实例加深以下理解:123456789101112131415161718import java.util.Scanner;public class Example2&#123; public static void main(String args[])&#123; System.out.println("请输入若干个数，每输入一个数回车确认"); System.out.println("最后输入数字-9999结束输入操作"); Scanner lll = new Scanner(System.in); double sum = 0; int m = 0; double x = lll.nextDouble(); while(x!=-9999)&#123; m+=1; // m = m + 1; sum+=x; // sum = sum + x; x = lll.nextDouble(); &#125; System.out.println(m+"个数的和为"+sum); System.out.println(m+"个数的平均值为"+sum/m); &#125;&#125; 运行结果如下，其余自行体会：12345678910x1aolin@x1aolin-E402NA:~/桌面$ java Example2请输入若干个数，每输入一个数回车确认最后输入数字-9999结束输入操作3456-99994个数的和为18.04个数的平均值为4.5 输入基本型数据三种类型：1234System.out.println() //1System.out.print() //2 二者的区别是1号代码输出数据后换行，2号不换行System.out.printf("格式控制部分"，表达式1，表达式2，...,表达式n)//类似c语言 注意事项: 使用时不可以采取回车操作 12345System.out.println("你好， 很高兴认识你"); // !!! 错误示范System.out.println("你好," + "很高兴认识你"); // !!! 正确示范字符串过长时用并置符号 + 将其首尾相连 在java中，允许使用并置符号 + 将变量、表达式或一个常数值与一个字符串并置在一起输出 对于上述第三种输出方法，有以下格式：(1)%d: int型数据(2)%f: 浮点型数据，小数部分最多保留6位。(3)%c: char型数据(4)%s: 字符串数据(5)%md:输出的int数据占据m列(6)%m.nf:输出的浮点型数据占据m列，小数点保留n位例如： 1System.out.println("%d %f",12,23.78);]]></content>
