@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="x1aolin">
 <meta property="og:description" content="声明数组 一维数组声明格式：(1) 数组的元素类型 数组名称[  ];(2) 数组的元素类型[  ] 数组名称;   二维数组声明格式：(1) 数组的元素类型 数组名称[  ][  ];(2) 数组的元素类型[  ][  ] 数组名称;举例:123float boy[];   // 等价于 float[] boy;char cat[][];  // 等价于 char[][] cat;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-30T14:17:02.562Z">
+<meta property="og:updated_time" content="2018-05-31T14:40:34.777Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java数组的用法">
 <meta name="twitter:description" content="声明数组 一维数组声明格式：(1) 数组的元素类型 数组名称[  ];(2) 数组的元素类型[  ] 数组名称;   二维数组声明格式：(1) 数组的元素类型 数组名称[  ][  ];(2) 数组的元素类型[  ][  ] 数组名称;举例:123float boy[];   // 等价于 float[] boy;char cat[][];  // 等价于 char[][] cat;">
@@ -394,12 +394,11 @@
 <h3 id="创建数组及初始化"><a href="#创建数组及初始化" class="headerlink" title="创建数组及初始化"></a>创建数组及初始化</h3><hr>
 <blockquote>
 <p>声明数组仅仅是给出了数组名字和元素的数据类型，如果想要使用还必须为它分配内存空间，即创建数组。</p>
-<ul>
-<li>静态初始化: 即定义数组的同时对数组进行初始化。<br>举例:<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] a=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;; <span class="comment">//这样就间接创建了一个拥有5个元素的数组</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
 </blockquote>
 <ul>
+<li><p>静态初始化: 即定义数组的同时对数组进行初始化。<br>举例:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] a=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;; <span class="comment">//这样就间接创建了一个拥有5个元素的数组</span></span><br></pre></td></tr></table></figure>
+</li>
 <li><p>动态初始化: 使用运算符new为数组分配空间。格式为：<code>数组名字 = new 数组元素的类型[数组元素的个数]</code><br>举例:</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a[];   <span class="comment">//声明</span></span><br><span class="line">a = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">5</span>]; <span class="comment">//创建一个元素值为五个的数组</span></span><br><span class="line">a[<span class="number">0</span>]=<span class="number">1</span>; a[<span class="number">1</span>]=<span class="number">2</span>; a[<span class="number">2</span>]=<span class="number">3</span>; a[<span class="number">3</span>]=<span class="number">4</span>; a[<span class="number">4</span>]=<span class="number">5</span>;  <span class="comment">//同上面静态初始化的值</span></span><br></pre></td></tr></table></figure>
 </li>
@@ -576,7 +575,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
