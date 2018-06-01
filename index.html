@@ -388,7 +388,7 @@
           <blockquote>
 <p>说明： 因为这一块和C语言的规则相差无几，所以此处不会重点描述，只说明一下其中的重点和与C不同的部分。</p>
 </blockquote>
-<h3 id="instanceof运-算符"><a href="#instanceof运-算符" class="headerlink" title="instanceof运 算符"></a>instanceof运 算符</h3><hr>
+<h2 id="运算符与表达式"><a href="#运算符与表达式" class="headerlink" title="运算符与表达式"></a>运算符与表达式</h2><h3 id="instanceof运算符"><a href="#instanceof运算符" class="headerlink" title="instanceof运算符"></a>instanceof运算符</h3><hr>
 <p>该运算符为二目运算符，左边的操作单元是一个对象，右边的是一个类。当左边的对象时右边的类或者子类创建的对象时，该运算符运算的结果时true,否则为false。</p>
 <h3 id="自增自减运算符"><a href="#自增自减运算符" class="headerlink" title="自增自减运算符"></a>自增自减运算符</h3><p>此处仅以（++X）和（X++）为例。粗略的看，<code>++x</code> 和 <code>x++</code> 的作用都是使x+1。<br>但是<code>++x</code>是先执行<code>x=x+1</code>，然后再使用x的值，而<code>x++</code>是先使用x的值然后再执行<code>x=x+1</code>。举个栗子:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="number">5</span>;  <span class="comment">//仅给出部分代码显示其功能</span></span><br><span class="line">y = ++x;  <span class="comment">// y的值为6</span></span><br><span class="line">z = x++;  <span class="comment">// z的值为5</span></span><br></pre></td></tr></table></figure></p>
           <!--noindex-->
