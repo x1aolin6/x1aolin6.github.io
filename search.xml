@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Java运算符、表达式和语句(一)]]></title>
+    <url>%2F2018%2F06%2F01%2FJava%E8%BF%90%E7%AE%97%E7%AC%A6%E3%80%81%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%92%8C%E8%AF%AD%E5%8F%A5%E4%B8%80%2F</url>
+    <content type="text"><![CDATA[说明： 因为这一块和C语言的规则相差无几，所以此处不会重点描述，只说明一下其中的重点和与C不同的部分。 instanceof运 算符 该运算符为二目运算符，左边的操作单元是一个对象，右边的是一个类。当左边的对象时右边的类或者子类创建的对象时，该运算符运算的结果时true,否则为false。 自增自减运算符此处仅以（++X）和（X++）为例。粗略的看，++x 和 x++ 的作用都是使x+1。但是++x是先执行x=x+1，然后再使用x的值，而x++是先使用x的值然后再执行x=x+1。举个栗子:123x = 5; //仅给出部分代码显示其功能y = ++x; // y的值为6z = x++; // z的值为5 运算符综述未完待续……]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java入门</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Java枚举类型]]></title>
     <url>%2F2018%2F05%2F31%2FJava%E6%9E%9A%E4%B8%BE%E7%B1%BB%E5%9E%8B%2F</url>
     <content type="text"><![CDATA[声明枚举类型java使用关键字 enum 声明枚举类型，语法格式如下:123enum 枚举名&#123; 常量列表&#125; 其中的“常量列表”是用逗号分隔的字符序列，称为枚举类型的常量(需符合标识符规定)。例如:123enum x1ao&#123; one,two,three,four&#125; 声明枚举变量声明了一个枚举类型后，就可以用该枚举类型的枚举声明一个枚举变量了。例如:1x1ao x; //用到了上面的声明 这样，枚举类型就可以使用枚举名和”,”运算符获得枚举类型中的常量。1x = x1ao.one; //这时候使用System.out.println(x)就可以显示one字符串 说明与举例可以在一个Java源文件中声明、定义枚举类型，然后保存源文件，最后单独编译源文件得到枚举类型的字节码文件，那么该字节码就可以被其他源文件中的类使用。下面给出示例: Weekday.java文件123public enum Weekday&#123; 星期一，星期二，星期三，星期四，星期五，星期六，星期日&#125; Example7.java123456789public class Example7&#123;//文件名随便起，限制条件请分类查找java第一篇博客 public static void main(String args[])&#123; Weekday x = Weekday.星期日; if(x==Weekday.星期日)&#123; System.out.println(x); System.out.println("今天我休息！"); &#125; &#125;&#125; 下面给出运行结果，大家可以自己运行试试,复制代码后将中文逗号等字符改成英文状态！！！1234x1aolin@x1aolin-E402NA:~/桌面$ javac Example7.java x1aolin@x1aolin-E402NA:~/桌面$ java Example7星期日今天我休息！]]></content>
