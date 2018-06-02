@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="x1aolin">
 <meta property="og:description" content="声明枚举类型java使用关键字 enum 声明枚举类型，语法格式如下:123enum 枚举名&amp;#123; 常量列表&amp;#125; 其中的“常量列表”是用逗号分隔的字符序列，称为枚举类型的常量(需符合标识符规定)。例如:123enum x1ao&amp;#123; one,two,three,four&amp;#125;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-31T15:04:59.960Z">
+<meta property="og:updated_time" content="2018-06-02T05:52:19.979Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java枚举类型">
 <meta name="twitter:description" content="声明枚举类型java使用关键字 enum 声明枚举类型，语法格式如下:123enum 枚举名&amp;#123; 常量列表&amp;#125; 其中的“常量列表”是用逗号分隔的字符序列，称为枚举类型的常量(需符合标识符规定)。例如:123enum x1ao&amp;#123; one,two,three,four&amp;#125;">
@@ -395,6 +395,11 @@
 <p><strong>Weekday.java文件</strong><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">enum</span> Weekday&#123;</span><br><span class="line"> 星期一，星期二，星期三，星期四，星期五，星期六，星期日</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p><strong>Example7.java</strong><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Example7</span></span>&#123;<span class="comment">//文件名随便起，限制条件请分类查找java第一篇博客</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">	  Weekday x = Weekday.星期日;</span><br><span class="line">	  <span class="keyword">if</span>(x==Weekday.星期日)&#123;</span><br><span class="line">	    System.out.println(x);</span><br><span class="line">		System.out.println(<span class="string">"今天我休息！"</span>);</span><br><span class="line">	  &#125;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>下面给出运行结果，大家可以自己运行试试,<strong>复制代码后将中文逗号等字符改成英文状态！！！</strong><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">x1aolin<span class="meta">@x</span>1aolin-E402NA:~/桌面$ javac Example7.java </span><br><span class="line">x1aolin<span class="meta">@x</span>1aolin-E402NA:~/桌面$ java Example7</span><br><span class="line">星期日</span><br><span class="line">今天我休息！</span><br></pre></td></tr></table></figure></p>
+<hr>
+<h3 id="补充-枚举类型与for，switch数组"><a href="#补充-枚举类型与for，switch数组" class="headerlink" title="补充:枚举类型与for，switch数组"></a>补充:枚举类型与for，switch数组</h3><ul>
+<li>除了上面所说，枚举类型可以用<code>枚举类型的名字.values()</code>返回一个数组，该数组的值与该枚举类型中的常量一一对应。</li>
+<li>jdk1.5后的版本允许switch语句中表达式的值是枚举类型。</li>
+</ul>
 
       
     </div>
@@ -571,7 +576,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#声明枚举类型"><span class="nav-number">1.</span> <span class="nav-text">声明枚举类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#声明枚举变量"><span class="nav-number">2.</span> <span class="nav-text">声明枚举变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#说明与举例"><span class="nav-number">3.</span> <span class="nav-text">说明与举例</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#声明枚举类型"><span class="nav-number">1.</span> <span class="nav-text">声明枚举类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#声明枚举变量"><span class="nav-number">2.</span> <span class="nav-text">声明枚举变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#说明与举例"><span class="nav-number">3.</span> <span class="nav-text">说明与举例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#补充-枚举类型与for，switch数组"><span class="nav-number">4.</span> <span class="nav-text">补充:枚举类型与for，switch数组</span></a></li></ol></div>
             
 
           </div>
