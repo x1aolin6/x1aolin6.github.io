@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[计算几何之寻找凸包]]></title>
+    <url>%2F2018%2F06%2F09%2F%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95%E4%B9%8B%E5%AF%BB%E6%89%BE%E5%87%B8%E5%8C%85%2F</url>
+    <content type="text"><![CDATA[首先我们先看一个例子:这个问题就是典型的凸包问题。先讲一下什么是凸包:凸包是一组点集中的子集,这一子集形成的凸多边形可以将点集中所有的点都围住,并且这一凸多边形的面积是最小的。 显而易见，上述问题的求解就是把最外面的一圈点用折线圈起来，这样就是最好的结果。那么，怎么把这种思想体现到计算机算法中呢？其实有很多种解决方法，其中这里讲一个比较容易理解实现的算法:打包法具体算法如下: 找出点集中最下方的点，如果这样的点不止一个，就选用最左边的点。 设想在该点处拴住了一根橡皮筋的一端，另一端放在和该点成水平位置的右侧。]]></content>
+      <categories>
+        <category>算法与程序设计</category>
+      </categories>
+      <tags>
+        <tag>计算几何算法</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Java对象基础]]></title>
     <url>%2F2018%2F06%2F04%2FJava%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1%E4%BA%8C%2F</url>
     <content type="text"><![CDATA[类是面向对象语言中最为重要的一种数据类型，类声明的变量称为对象。类是创建对象的模板，当使用一个类创建一个对象时，也称给出了这个类的一个实例。 创建对象创建对象包括对象的声明和为声明的对象分配内存两个步骤: 1.对象的声明类的名字 对象名字; //声明之后，就可以分配内存了 2.为声明的对象分配内存 使用new运算符和类的构造方法为声明的对象分配内存，即调用构造方法为其分配内存。如果类中没有构造方法，系统会调用默认的构造方法(默认构造方法:无参无语句)。如果类中定义了一个或多个构造方法，那么Java不提供默认的构造方法。举个栗子:1234567891011121314class xiyoujiRenwu&#123; float height,weight; String head,ear,hand,foot,mouth; void speak(String s)&#123; System.out.println(s); &#125;&#125;public class Example4_1&#123; public static void main(String argv[])&#123; xiyoujiRenwu zhubajie; //声明对象 zhubajie = new xiyoujiRenwu(); //为对象分配内存，默认构造方法 &#125;&#125;//自建构造方法此处不再给出，在以后的讲述中会有提到。]]></content>
