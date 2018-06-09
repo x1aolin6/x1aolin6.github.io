@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="类是面向对象语言中最为重要的一种数据类型，类声明的变量称为对象。类是创建对象的模板，当使用一个类创建一个对象时，也称给出了这个类的一个实例。  创建对象创建对象包括对象的声明和为声明的对象分配内存两个步骤:">
+<meta name="description" content="类是面向对象语言中最为重要的一种数据类型，类声明的变量称为对象。类是创建对象的模板，当使用一个类创建一个对象时，也称给出了这个类的一个实例。  创建对象创建对象包括对象的声明和为声明的对象分配内存两个步骤:   1.对象的声明类的名字  对象名字;      //声明之后，就可以分配内存了 2.为声明的对象分配内存">
 <meta name="keywords" content="Java类与对象">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java对象基础">
 <meta property="og:url" content="http://x1aolin6.top/2018/06/04/Java类与对象二/index.html">
 <meta property="og:site_name" content="x1aolin">
-<meta property="og:description" content="类是面向对象语言中最为重要的一种数据类型，类声明的变量称为对象。类是创建对象的模板，当使用一个类创建一个对象时，也称给出了这个类的一个实例。  创建对象创建对象包括对象的声明和为声明的对象分配内存两个步骤:">
+<meta property="og:description" content="类是面向对象语言中最为重要的一种数据类型，类声明的变量称为对象。类是创建对象的模板，当使用一个类创建一个对象时，也称给出了这个类的一个实例。  创建对象创建对象包括对象的声明和为声明的对象分配内存两个步骤:   1.对象的声明类的名字  对象名字;      //声明之后，就可以分配内存了 2.为声明的对象分配内存">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-07T08:20:00.448Z">
+<meta property="og:updated_time" content="2018-06-09T03:51:17.400Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java对象基础">
-<meta name="twitter:description" content="类是面向对象语言中最为重要的一种数据类型，类声明的变量称为对象。类是创建对象的模板，当使用一个类创建一个对象时，也称给出了这个类的一个实例。  创建对象创建对象包括对象的声明和为声明的对象分配内存两个步骤:">
+<meta name="twitter:description" content="类是面向对象语言中最为重要的一种数据类型，类声明的变量称为对象。类是创建对象的模板，当使用一个类创建一个对象时，也称给出了这个类的一个实例。  创建对象创建对象包括对象的声明和为声明的对象分配内存两个步骤:   1.对象的声明类的名字  对象名字;      //声明之后，就可以分配内存了 2.为声明的对象分配内存">
 
 
 
@@ -390,6 +390,10 @@
 <p>类是面向对象语言中最为重要的一种数据类型，类声明的变量称为对象。类是创建对象的模板，当使用一个类创建一个对象时，也称给出了这个类的一个实例。</p>
 </blockquote>
 <h3 id="创建对象"><a href="#创建对象" class="headerlink" title="创建对象"></a>创建对象</h3><p><em>创建对象包括<code>对象的声明</code>和<code>为声明的对象分配内存</code>两个步骤:</em>  </p>
+<p>1.对象的声明<br>类的名字  对象名字;      //声明之后，就可以分配内存了</p>
+<p>2.为声明的对象分配内存  </p>
+<a id="more"></a>
+<p>使用new运算符和类的构造方法为声明的对象分配内存，即调用构造方法为其分配内存。如果类中没有构造方法，系统会调用默认的构造方法(默认构造方法:无参无语句)。<strong>如果类中定义了一个或多个构造方法，那么Java不提供默认的构造方法。</strong><br>举个栗子:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">xiyoujiRenwu</span></span>&#123;</span><br><span class="line">	<span class="keyword">float</span> height,weight;</span><br><span class="line">	String head,ear,hand,foot,mouth;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">speak</span><span class="params">(String s)</span></span>&#123;</span><br><span class="line">		System.out.println(s);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Example4_1</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String argv[])</span></span>&#123;</span><br><span class="line">		xiyoujiRenwu zhubajie;    <span class="comment">//声明对象</span></span><br><span class="line">		zhubajie = <span class="keyword">new</span> xiyoujiRenwu();  <span class="comment">//为对象分配内存，默认构造方法</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//自建构造方法此处不再给出，在以后的讲述中会有提到。</span></span><br></pre></td></tr></table></figure></p>
 
       
     </div>
