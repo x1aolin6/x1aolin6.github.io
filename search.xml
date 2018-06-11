@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Java之static关键字]]></title>
+    <url>%2F2018%2F06%2F11%2FJava%E4%B9%8Bstatic%E5%85%B3%E9%94%AE%E5%AD%97%2F</url>
+    <content type="text"><![CDATA[持续更新中…]]></content>
+      <categories>
+        <category>Java入门教程</category>
+      </categories>
+      <tags>
+        <tag>Java类与对象</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Java参数传值]]></title>
     <url>%2F2018%2F06%2F11%2FJava%E5%8F%82%E6%95%B0%E4%BC%A0%E5%80%BC%2F</url>
-    <content type="text"><![CDATA[稍等马上更新…]]></content>
+    <content type="text"><![CDATA[当方法被调用的时候，如果方法有参数，参数必须要实例化，即参数必须有具体的值。在Java中，方法的所有参数都是“传值”的，也就是说，方法中参数变量的值是调用者指定的一个副本。 基本数据类型参数传值对于基本类型的参数，向该参数传递的值的级别不可以高于该参数的级别，可以低于该参数的级别。如果传递值的级别比参数的级别低，则传递过程中会自动转化。 引用类型参数的传值这里先普及一下什么是引用类型: 对象，数组，接口等都是引用类型，关于引用类型的含义或者理解在上篇博客第三点有提到:对象的引用和实体。当参数是引用类型时，“传值”传递过去的是变量中存放的“引用”，而不是变量的实体。 所以对于两个同类型的引用型变量，如果具有同样的引用，就会有同样的实体，因此，如果改变参数变量所引用的实体，就会导致原变量的实体发生同样的变化。但是，改变参数的“引用”不会影响向其传值的变量中存放的“引用”。放个图加深理解: 说明： 上面的意思是说当调用左右任何一个引用来改变实体后，另一个引用所指实体也会改变，它们本来就是一个嘛。当改变左右任何一个引用，就是该引用不再指向这个实体后，另一个应用不受影响，仍然指向这个实体 这个想想应该可以理解，就暂时不放代码示例了，如果大家有要求，我再吧代码放上去。 可变参数 这个是C++里面没有的，所以请大家多关注一下。 可变参数是指在声明方法时不给出参数列表中从某项直至最后一项参数的名字和个数，但这些参数的类型应该相同。可变参数使用”…”表示若干个参数，最后一个参数必须是参数列表中的最后一个参数。例如:1public void aaa(double h,int ... x); 这里的x是方法aaa的参数列表中可变参数的参数代表。参数代表可以通过下标运算来表示参数列表中的具体参数，即x[0]，x[1]，… ，x[m-1]来表示x所代表的参数。对于一个参数代表，参数代表.length等于参数代表所代表的个数。举个栗子:123456789101112131415161718192021class Computer&#123; public double getResult(double a,int ... x)&#123; // !!! double result = 0; int sum = 0; for(int ss:x)&#123; //下面会给解释 sum +=ss; &#125; result = a*sum; System.out.println("x代表了"+x.length+"个数"); return result; &#125;&#125;public class Exam&#123; public static void main(String args[])&#123; Computer comp = new Computer(); double result = comp.getResult(1.0/3,5,6,7);//x代表三个数 System.out.println("5,6,7的平均数:"+result); result = comp.getResult(1.0/5,11,22,33,44,55);//x代表五个数 System.out.println("11,22,33,44,55的平均数为:"+result); &#125;&#125; 代码运行结果如下，请大家好好体会:1234567olin@x1aolin-E402NA:~/桌面$ vim Exam.javax1aolin@x1aolin-E402NA:~/桌面$ javac Exam.java x1aolin@x1aolin-E402NA:~/桌面$ java Examx代表了3个数5,6,7的平均数:6.0x代表了5个数11,22,33,44,55的平均数为:33.0]]></content>
       <categories>
         <category>Java入门教程</category>
       </categories>

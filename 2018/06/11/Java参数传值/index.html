@@ -79,18 +79,20 @@
 
 
 
-<meta name="description" content="稍等马上更新…">
+<meta name="description" content="当方法被调用的时候，如果方法有参数，参数必须要实例化，即参数必须有具体的值。在Java中，方法的所有参数都是“传值”的，也就是说，方法中参数变量的值是调用者指定的一个副本。  基本数据类型参数传值对于基本类型的参数，向该参数传递的值的级别不可以高于该参数的级别，可以低于该参数的级别。如果传递值的级别比参数的级别低，则传递过程中会自动转化。">
 <meta name="keywords" content="Java类与对象">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java参数传值">
 <meta property="og:url" content="http://x1aolin6.top/2018/06/11/Java参数传值/index.html">
 <meta property="og:site_name" content="x1aolin">
-<meta property="og:description" content="稍等马上更新…">
+<meta property="og:description" content="当方法被调用的时候，如果方法有参数，参数必须要实例化，即参数必须有具体的值。在Java中，方法的所有参数都是“传值”的，也就是说，方法中参数变量的值是调用者指定的一个副本。  基本数据类型参数传值对于基本类型的参数，向该参数传递的值的级别不可以高于该参数的级别，可以低于该参数的级别。如果传递值的级别比参数的级别低，则传递过程中会自动转化。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-11T04:22:15.081Z">
+<meta property="og:image" content="http://x1aolin6.top/2018/06/11/Java参数传值/1.png">
+<meta property="og:updated_time" content="2018-06-11T13:09:31.919Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java参数传值">
-<meta name="twitter:description" content="稍等马上更新…">
+<meta name="twitter:description" content="当方法被调用的时候，如果方法有参数，参数必须要实例化，即参数必须有具体的值。在Java中，方法的所有参数都是“传值”的，也就是说，方法中参数变量的值是调用者指定的一个副本。  基本数据类型参数传值对于基本类型的参数，向该参数传递的值的级别不可以高于该参数的级别，可以低于该参数的级别。如果传递值的级别比参数的级别低，则传递过程中会自动转化。">
+<meta name="twitter:image" content="http://x1aolin6.top/2018/06/11/Java参数传值/1.png">
 
 
 
@@ -386,7 +388,24 @@
       
 
       
-        <p>稍等马上更新…</p>
+        <blockquote>
+<p>当方法被调用的时候，如果方法有参数，参数必须要实例化，即参数必须有具体的值。在Java中，方法的所有参数都是“传值”的，也就是说，方法中参数变量的值是调用者指定的一个副本。</p>
+</blockquote>
+<h4 id="基本数据类型参数传值"><a href="#基本数据类型参数传值" class="headerlink" title="基本数据类型参数传值"></a>基本数据类型参数传值</h4><p>对于基本类型的参数，向该参数传递的值的级别不可以高于该参数的级别，可以低于该参数的级别。如果传递值的级别比参数的级别低，则传递过程中会自动转化。</p>
+<a id="more"></a>
+<h4 id="引用类型参数的传值"><a href="#引用类型参数的传值" class="headerlink" title="引用类型参数的传值"></a>引用类型参数的传值</h4><p>这里先普及一下什么是<strong>引用类型:</strong> 对象，数组，接口等都是引用类型，关于引用类型的含义或者理解在上篇博客第三点有提到:<a href="http://x1aolin6.top/2018/06/04/Java%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1%E4%BA%8C/">对象的引用和实体</a>。当参数是引用类型时，“传值”传递过去的是变量中存放的“引用”，而不是变量的实体。</p>
+<p>所以对于两个同类型的引用型变量，如果具有同样的引用，就会有同样的实体，因此，如果改变参数变量所引用的实体，就会导致原变量的实体发生同样的变化。但是，改变参数的“引用”不会影响向其传值的变量中存放的“引用”。放个图加深理解:<br><img src="/2018/06/11/Java参数传值/1.png" alt="引用传值"></p>
+<p><em>说明：</em> </p>
+<ul>
+<li>上面的意思是说当调用左右任何一个引用来改变实体后，另一个引用所指实体也会改变，它们本来就是一个嘛。当改变左右任何一个引用，就是该引用不再指向这个实体后，另一个应用不受影响，仍然指向这个实体</li>
+<li>这个想想应该可以理解，就暂时不放代码示例了，如果大家有要求，我再吧代码放上去。</li>
+</ul>
+<h4 id="可变参数"><a href="#可变参数" class="headerlink" title="可变参数"></a>可变参数</h4><blockquote>
+<p>这个是C++里面没有的，所以请大家多关注一下。</p>
+</blockquote>
+<p>可变参数是指在声明方法时不给出参数列表中从某项直至最后一项参数的名字和个数，但这些参数的类型应该相同。可变参数使用”…”表示若干个参数，最后一个参数必须是参数列表中的最后一个参数。例如:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">aaa</span><span class="params">(<span class="keyword">double</span> h,<span class="keyword">int</span> ... x)</span></span>;</span><br></pre></td></tr></table></figure></p>
+<p>这里的x是方法aaa的参数列表中可变参数的<strong>参数代表</strong>。参数代表可以通过下标运算来表示参数列表中的具体参数，即x[0]，x[1]，… ，x[m-1]来表示x所代表的参数。对于一个参数代表，<code>参数代表.length</code>等于参数代表所代表的个数。<br>举个栗子:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Computer</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">getResult</span><span class="params">(<span class="keyword">double</span> a,<span class="keyword">int</span> ... x)</span></span>&#123;  <span class="comment">// !!!</span></span><br><span class="line">		<span class="keyword">double</span> result = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> ss:x)&#123; <span class="comment">//下面会给解释</span></span><br><span class="line">			sum +=ss;</span><br><span class="line">		&#125;</span><br><span class="line">		result = a*sum;</span><br><span class="line">		System.out.println(<span class="string">"x代表了"</span>+x.length+<span class="string">"个数"</span>);</span><br><span class="line">		<span class="keyword">return</span> result;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Exam</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">		Computer comp = <span class="keyword">new</span> Computer();</span><br><span class="line">		<span class="keyword">double</span> result = comp.getResult(<span class="number">1.0</span>/<span class="number">3</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>);<span class="comment">//x代表三个数</span></span><br><span class="line">		System.out.println(<span class="string">"5,6,7的平均数:"</span>+result);</span><br><span class="line">		result = comp.getResult(<span class="number">1.0</span>/<span class="number">5</span>,<span class="number">11</span>,<span class="number">22</span>,<span class="number">33</span>,<span class="number">44</span>,<span class="number">55</span>);<span class="comment">//x代表五个数</span></span><br><span class="line">		System.out.println(<span class="string">"11,22,33,44,55的平均数为:"</span>+result);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>代码运行结果如下，请大家好好体会:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">olin<span class="meta">@x</span>1aolin-E402NA:~/桌面$ vim Exam.java</span><br><span class="line">x1aolin<span class="meta">@x</span>1aolin-E402NA:~/桌面$ javac Exam.java </span><br><span class="line">x1aolin<span class="meta">@x</span>1aolin-E402NA:~/桌面$ java Exam</span><br><span class="line">x代表了<span class="number">3</span>个数</span><br><span class="line"><span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>的平均数:<span class="number">6.0</span></span><br><span class="line">x代表了<span class="number">5</span>个数</span><br><span class="line"><span class="number">11</span>,<span class="number">22</span>,<span class="number">33</span>,<span class="number">44</span>,<span class="number">55</span>的平均数为:<span class="number">33.0</span></span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -426,6 +445,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/06/11/Java之static关键字/" rel="prev" title="Java之static关键字">
+                Java之static关键字 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -479,8 +502,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -495,7 +527,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -540,6 +572,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#基本数据类型参数传值"><span class="nav-number">1.</span> <span class="nav-text">基本数据类型参数传值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#引用类型参数的传值"><span class="nav-number">2.</span> <span class="nav-text">引用类型参数的传值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#可变参数"><span class="nav-number">3.</span> <span class="nav-text">可变参数</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
