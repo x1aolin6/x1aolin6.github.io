@@ -89,7 +89,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://x1aolin6.top/2018/06/09/计算几何之寻找凸包/1.png">
 <meta property="og:image" content="http://x1aolin6.top/2018/06/09/计算几何之寻找凸包/2.png">
-<meta property="og:updated_time" content="2018-06-10T07:41:16.217Z">
+<meta property="og:updated_time" content="2018-06-10T11:22:49.327Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="计算几何之寻找凸包">
 <meta name="twitter:description" content="首先我们先看一个例子:这个问题就是典型的凸包问题。先讲一下什么是凸包:凸包是一组点集中的子集,这一子集形成的凸多边形可以将点集中所有的点都围住,并且这一凸多边形的面积是最小的。">
@@ -391,7 +391,7 @@
       
         <p>首先我们先看一个例子:<br><img src="/2018/06/09/计算几何之寻找凸包/1.png" alt="地主圈地"><br>这个问题就是典型的凸包问题。先讲一下什么是<strong>凸包</strong>:<br><em>凸包是一组点集中的子集,这一子集形成的凸多边形可以将点集中所有的点都围住,并且这一凸多边形的面积是最小的。</em></p>
 <a id="more"></a>
-<p>显而易见，上述问题的求解就是<strong>把最外面的一圈点用折线圈起来</strong>，这样就是最好的结果。那么，怎么把这种思想体现到计算机算法中呢？<br>其实有很多种解决方法，其中这里讲一个比较容易理解实现的算法:<strong>打包法</strong><br>具体算法如下:</p>
+<p>显而易见，上述问题的求解就是<strong>把最外面的一圈点用折线圈起来</strong>，这样就是最好的结果。那么，怎么把这种思想体现到计算机算法中呢？其实有很多种解决方法，其中这里讲一个比较容易理解实现的算法:<strong>打包法</strong><br>具体算法如下:</p>
 <ul>
 <li>找出点集中最下方的点，如果这样的点不止一个，就选用最左边的点。</li>
 <li>设想在该点处拴住了一根橡皮筋的一端，另一端放在和该点成水平位置的右侧。</li>
@@ -445,7 +445,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/06/10/凹-多边形求面积/" rel="prev" title="有向面积">
+              <a href="/2018/06/10/有向面积/" rel="prev" title="有向面积">
                 有向面积 <i class="fa fa-chevron-right"></i>
               </a>
             
