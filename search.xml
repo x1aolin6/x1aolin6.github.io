@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Java参数传值]]></title>
+    <url>%2F2018%2F06%2F11%2FJava%E5%8F%82%E6%95%B0%E4%BC%A0%E5%80%BC%2F</url>
+    <content type="text"><![CDATA[稍等马上更新…]]></content>
+      <categories>
+        <category>Java入门教程</category>
+      </categories>
+      <tags>
+        <tag>Java类与对象</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[有向面积]]></title>
     <url>%2F2018%2F06%2F10%2F%E6%9C%89%E5%90%91%E9%9D%A2%E7%A7%AF%2F</url>
     <content type="text"><![CDATA[此次介绍用有向面积的概念求(凹)多边形的面积，理论基础传送门，大家可以点开超链接了解一下什么是有向面积，然后再来看此处的例题: Input: The input data consists of several figures. The first line of the input for each figure contains asingle integer n, the number of vertexes in the figure. (0≤n≤1000).In the following n lines, each contain a pair of real numbers, which describes the coordinates ofthe vertexes, (xi, yi). The figure in each test case starts from the first vertex to the second one,then from the second to the third, …… and so on. At last, it closes from the nth vertex to the firstone.The input ends with an empty figure (n = 0). And this figure not be processed. Output: As shown below, the output of each figure should contain the figure number and a colon followedby the area of the figure or the string “Impossible”.If the figure is a polygon, compute its area (accurate to two fractional digits). According to theinput vertexes, if they cannot form a polygon (that is, one line intersects with another whichshouldn’t be adjoined with it, for example, in a figure with four lines, the first line intersects withthe third one), just display “Impossible”, indicating the figure can’t be a polygon. If the amount ofthe vertexes is not enough to form a closed polygon, the output message should be “Impossible”either. 代码实现：1...未完待续]]></content>
