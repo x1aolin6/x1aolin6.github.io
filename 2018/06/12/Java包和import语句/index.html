@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="x1aolin">
 <meta property="og:description" content="包包是Java语言中有效的管理类的一个机制。不同Java源文件中可能出现名字相同的类，如果想区分这些类，就需要使用包名。使用包名的目的是有效的区分名字相同的类。 1.包语句通过关键词package声明包语句。package语句需要放在Java源文件的第一条语句，指明该源文件定义的类所在的包，即为该源文件中声明的类指定包名。一般格式:1package 包名;//包名是一个合法的标识符或者若干个标识符">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-12T16:04:45.291Z">
+<meta property="og:updated_time" content="2018-06-12T16:08:42.164Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java包和import语句">
 <meta name="twitter:description" content="包包是Java语言中有效的管理类的一个机制。不同Java源文件中可能出现名字相同的类，如果想区分这些类，就需要使用包名。使用包名的目的是有效的区分名字相同的类。 1.包语句通过关键词package声明包语句。package语句需要放在Java源文件的第一条语句，指明该源文件定义的类所在的包，即为该源文件中声明的类指定包名。一般格式:1package 包名;//包名是一个合法的标识符或者若干个标识符">
@@ -388,11 +388,11 @@
       
         <h3 id="包"><a href="#包" class="headerlink" title="包"></a>包</h3><p>包是Java语言中有效的管理类的一个机制。不同Java源文件中可能出现名字相同的类，如果想区分这些类，就需要使用包名。<strong>使用包名的目的是有效的区分名字相同的类</strong>。</p>
 <h4 id="1-包语句"><a href="#1-包语句" class="headerlink" title="1.包语句"></a>1.包语句</h4><p>通过关键词<code>package</code>声明包语句。package语句需要放在Java源文件的第一条语句，指明该源文件定义的类所在的包，即为该源文件中声明的类指定包名。<br>一般格式:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> 包名;<span class="comment">//包名是一个合法的标识符或者若干个标识符加“.”分隔而成</span></span><br></pre></td></tr></table></figure></p>
-<p>有的小伙伴可能会有疑问了，在这篇blog之前的blog中的Java代码都没有加上述语句，为什么还能运行？那是因为我们省略了package语句。如果省略了该语句，源文件中所定义命名的类被隐含地认为是无名类的一部分，只要这些类的字节码被存放在相同的目录中，那么他们就属于同一个包，只是没有包名罢了。</p>
 <a id="more"></a>
-<h3 id="2-有包名的类的储存"><a href="#2-有包名的类的储存" class="headerlink" title="2.有包名的类的储存"></a>2.有包名的类的储存</h3><p>如果我们显式地定义了包名，就不能再像之前那样在随意的位置存放了，需要遵守一定的规则，否则虚拟机将无法加载这样的类。<br>程序如果使用了包语句，例如：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> x1ao.lin;</span><br></pre></td></tr></table></figure></p>
+<p>有的小伙伴可能会有疑问了，在这篇blog之前的blog中的Java代码都没有加上述语句，为什么还能运行？那是因为我们省略了package语句。如果省略了该语句，源文件中所定义命名的类被隐含地认为是无名类的一部分，只要这些类的字节码被存放在相同的目录中，那么他们就属于同一个包，只是没有包名罢了。</p>
+<h4 id="2-有包名的类的储存"><a href="#2-有包名的类的储存" class="headerlink" title="2.有包名的类的储存"></a>2.有包名的类的储存</h4><p>如果我们显式地定义了包名，就不能再像之前那样在随意的位置存放了，需要遵守一定的规则，否则虚拟机将无法加载这样的类。<br>程序如果使用了包语句，例如：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> x1ao.lin;</span><br></pre></td></tr></table></figure></p>
 <p>那么在存储文件的目录结构中必须包含如下结构: <code>.../x1ao/lin</code>（Windows下是\斜杠），并且要将源文件编译文件得到的字节码文件保存到该目录(源文件位置可任意)。</p>
-<h3 id="3-运行有包名的主类"><a href="#3-运行有包名的主类" class="headerlink" title="3.运行有包名的主类"></a>3.运行有包名的主类</h3><p>如果主类的包名是x1ao.lin，那么主类的字节码一定一定要存放在<code>.../x1ao/lin</code>目录中，因此必须到<code>x1ao/lin</code>的上一层(即x1ao的父目录)目录中运行主类。举个栗子:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x1aolin<span class="meta">@x</span>1aolin-E402NA:~/projects$ java x1ao.lin.主类名</span><br></pre></td></tr></table></figure></p>
+<h4 id="3-运行有包名的主类"><a href="#3-运行有包名的主类" class="headerlink" title="3.运行有包名的主类"></a>3.运行有包名的主类</h4><p>如果主类的包名是x1ao.lin，那么主类的字节码一定一定要存放在<code>.../x1ao/lin</code>目录中，因此必须到<code>x1ao/lin</code>的上一层(即x1ao的父目录)目录中运行主类。举个栗子:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x1aolin<span class="meta">@x</span>1aolin-E402NA:~/projects$ java x1ao.lin.主类名</span><br></pre></td></tr></table></figure></p>
 <p><strong>Notice:</strong> 运行时，必须写主类的全名。使用包名后主类的全名为“包名.主类名”。</p>
 
       
@@ -566,7 +566,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#包"><span class="nav-number">1.</span> <span class="nav-text">包</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-包语句"><span class="nav-number">1.1.</span> <span class="nav-text">1.包语句</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-有包名的类的储存"><span class="nav-number">2.</span> <span class="nav-text">2.有包名的类的储存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-运行有包名的主类"><span class="nav-number">3.</span> <span class="nav-text">3.运行有包名的主类</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#包"><span class="nav-number">1.</span> <span class="nav-text">包</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-包语句"><span class="nav-number">1.1.</span> <span class="nav-text">1.包语句</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-有包名的类的储存"><span class="nav-number">1.2.</span> <span class="nav-text">2.有包名的类的储存</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-运行有包名的主类"><span class="nav-number">1.3.</span> <span class="nav-text">3.运行有包名的主类</span></a></li></ol></li></ol></div>
             
 
           </div>

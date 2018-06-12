@@ -387,7 +387,6 @@
         
           <h3 id="包"><a href="#包" class="headerlink" title="包"></a>包</h3><p>包是Java语言中有效的管理类的一个机制。不同Java源文件中可能出现名字相同的类，如果想区分这些类，就需要使用包名。<strong>使用包名的目的是有效的区分名字相同的类</strong>。</p>
 <h4 id="1-包语句"><a href="#1-包语句" class="headerlink" title="1.包语句"></a>1.包语句</h4><p>通过关键词<code>package</code>声明包语句。package语句需要放在Java源文件的第一条语句，指明该源文件定义的类所在的包，即为该源文件中声明的类指定包名。<br>一般格式:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> 包名;<span class="comment">//包名是一个合法的标识符或者若干个标识符加“.”分隔而成</span></span><br></pre></td></tr></table></figure></p>
-<p>有的小伙伴可能会有疑问了，在这篇blog之前的blog中的Java代码都没有加上述语句，为什么还能运行？那是因为我们省略了package语句。如果省略了该语句，源文件中所定义命名的类被隐含地认为是无名类的一部分，只要这些类的字节码被存放在相同的目录中，那么他们就属于同一个包，只是没有包名罢了。</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/06/12/Java包和import语句/#more" rel="contents">
