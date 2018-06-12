@@ -385,10 +385,19 @@
 
       
         
-          
-            <p>持续更新中…</p>
-
-          
+          <blockquote>
+<p>类体的定义 –&gt; 成员变量的定义 + 方法的定义。<br>成员变量 –&gt; 实例变量 + 类变量(static) 。<br>方法 –&gt; 构造方法 + 类方法(static) + 实例方法。<br>类方法只能调用类方法，实例变量可调用类中的实例方法和类方法。</p>
+</blockquote>
+<h3 id="实例变量和类变量的区别"><a href="#实例变量和类变量的区别" class="headerlink" title="实例变量和类变量的区别"></a>实例变量和类变量的区别</h3><ol>
+<li>一个类通过使用new运算符可以创建多个不同的对象，这些对象将被分配不同的内存空间。更准确的是，不同对象的实例变量将被分配不同的内存空间，但是所有对象的这个类变量都分配给相同的一处内存，改变其中一个对象的这个类变量会影响其他对象的这个类变量,即<strong>对象共享类变量</strong></li>
+</ol>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/06/11/Java之static关键字/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>

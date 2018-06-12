@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="持续更新中…">
+<meta name="description" content="类体的定义 –&amp;gt; 成员变量的定义 + 方法的定义。成员变量 –&amp;gt; 实例变量 + 类变量(static) 。方法 –&amp;gt; 构造方法 + 类方法(static) + 实例方法。类方法只能调用类方法，实例变量可调用类中的实例方法和类方法。  实例变量和类变量的区别 一个类通过使用new运算符可以创建多个不同的对象，这些对象将被分配不同的内存空间。更准确的是，不同对象的实例变量将被分配不">
 <meta name="keywords" content="Java类与对象">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java之static关键字">
 <meta property="og:url" content="http://x1aolin6.top/2018/06/11/Java之static关键字/index.html">
 <meta property="og:site_name" content="x1aolin">
-<meta property="og:description" content="持续更新中…">
+<meta property="og:description" content="类体的定义 –&amp;gt; 成员变量的定义 + 方法的定义。成员变量 –&amp;gt; 实例变量 + 类变量(static) 。方法 –&amp;gt; 构造方法 + 类方法(static) + 实例方法。类方法只能调用类方法，实例变量可调用类中的实例方法和类方法。  实例变量和类变量的区别 一个类通过使用new运算符可以创建多个不同的对象，这些对象将被分配不同的内存空间。更准确的是，不同对象的实例变量将被分配不">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-11T13:11:46.639Z">
+<meta property="og:updated_time" content="2018-06-12T09:18:37.378Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java之static关键字">
-<meta name="twitter:description" content="持续更新中…">
+<meta name="twitter:description" content="类体的定义 –&amp;gt; 成员变量的定义 + 方法的定义。成员变量 –&amp;gt; 实例变量 + 类变量(static) 。方法 –&amp;gt; 构造方法 + 类方法(static) + 实例方法。类方法只能调用类方法，实例变量可调用类中的实例方法和类方法。  实例变量和类变量的区别 一个类通过使用new运算符可以创建多个不同的对象，这些对象将被分配不同的内存空间。更准确的是，不同对象的实例变量将被分配不">
 
 
 
@@ -386,7 +386,30 @@
       
 
       
-        <p>持续更新中…</p>
+        <blockquote>
+<p>类体的定义 –&gt; 成员变量的定义 + 方法的定义。<br>成员变量 –&gt; 实例变量 + 类变量(static) 。<br>方法 –&gt; 构造方法 + 类方法(static) + 实例方法。<br>类方法只能调用类方法，实例变量可调用类中的实例方法和类方法。</p>
+</blockquote>
+<h3 id="实例变量和类变量的区别"><a href="#实例变量和类变量的区别" class="headerlink" title="实例变量和类变量的区别"></a>实例变量和类变量的区别</h3><ol>
+<li>一个类通过使用new运算符可以创建多个不同的对象，这些对象将被分配不同的内存空间。更准确的是，不同对象的实例变量将被分配不同的内存空间，但是所有对象的这个类变量都分配给相同的一处内存，改变其中一个对象的这个类变量会影响其他对象的这个类变量,即<strong>对象共享类变量</strong></li>
+</ol>
+<a id="more"></a>
+<ol start="2">
+<li>当Java程序执行时，类的字节码文件被加载到内存，如果该类没有创建对象，类中的实例变量不会被分配到内存。但是类中的类变量是该类被加载到内存时，就分配了相应的内存空间。</li>
+<li>如果该类创建对象，那么不同对象的实例变量互不相同，即分配不同的内存空间，而类变量不再重新分配内存，所有对象共享类变量，即所有对象的类变量是相同的一处内存空间，类变量的内存空间直到程序退出运行，才释放所占有的内存。</li>
+<li>因为类变量的特殊性，它既可以通过某个对象访问，<strong>也可以直接通过类名访问</strong>；而实例变量只能通过对象访问。</li>
+</ol>
+<blockquote>
+<p>道理比较浅显，我就不举例子啦。^_^</p>
+</blockquote>
+<h3 id="实例方法和类方法的区别"><a href="#实例方法和类方法的区别" class="headerlink" title="实例方法和类方法的区别"></a>实例方法和类方法的区别</h3><ol>
+<li>方法的入口地址只分配一次，被所有对象共享，当所有的对象都不存在时，方法的入口地址才会取消。</li>
+<li>当类的字节码文件被加载到内存时，类的实例方法不会被分配入口地址，在该类创建对象后，类中的实例方法才分配入口地址，从而实例方法可以被类创建的任何对象调用。</li>
+<li>对于类中的类方法，在该类被加载到内存时，就分配了相应的入口地址，所以类方法不仅可以被类创建的任何对象调用，也可以<strong>直接通过类名调用</strong>。类方法的入口地址直到程序退出才会被取消。</li>
+<li>实例方法既能对类变量操作也能对实例变量进行操作，而类方法只能对类变量进行操作 </li>
+<li><em>由于类方法的特性，如果一个方法不需要操作实例变量就可以实现某种功能，就优先考虑声明为类方法,这样可以节省空间。</em></li>
+</ol>
+<p>这此给大家举个栗子:(包含许多以前学过的知识)<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Sum</span></span>&#123;</span><br><span class="line">	<span class="keyword">static</span> <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">	<span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">getResult</span><span class="params">(<span class="keyword">int</span> ... x)</span></span>&#123;<span class="comment">//详情请看上一篇</span></span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i:x)&#123;</span><br><span class="line">			sum+=i;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Exam1</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">		Sum.getResult(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>);<span class="comment">//45</span></span><br><span class="line">		System.out.printf(<span class="string">"%d\n"</span>,Sum.sum);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>运行结果如下，自行体会:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x1aolin<span class="meta">@x</span>1aolin-E402NA:~/桌面$ java Exam1</span><br><span class="line"><span class="number">45</span></span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -479,8 +502,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -540,6 +572,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#实例变量和类变量的区别"><span class="nav-number">1.</span> <span class="nav-text">实例变量和类变量的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实例方法和类方法的区别"><span class="nav-number">2.</span> <span class="nav-text">实例方法和类方法的区别</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
