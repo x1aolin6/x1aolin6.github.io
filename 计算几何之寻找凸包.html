@@ -79,20 +79,20 @@
 
 
 
-<meta name="description" content="首先我们先看一个例子:这个问题就是典型的凸包问题。先讲一下什么是凸包:凸包是一组点集中的子集,这一子集形成的凸多边形可以将点集中所有的点都围住,并且这一凸多边形的面积是最小的。">
+<meta name="description" content="首先我们先看一个例子:    这个问题就是典型的凸包问题。先讲一下什么是凸包:凸包是一组点集中的子集,这一子集形成的凸多边形可以将点集中所有的点都围住,并且这一凸多边形的面积是最小的。">
 <meta name="keywords" content="计算几何算法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="计算几何之寻找凸包">
 <meta property="og:url" content="http://x1aolin6.top/计算几何之寻找凸包.html">
-<meta property="og:site_name" content="小林的个人小屋">
-<meta property="og:description" content="首先我们先看一个例子:这个问题就是典型的凸包问题。先讲一下什么是凸包:凸包是一组点集中的子集,这一子集形成的凸多边形可以将点集中所有的点都围住,并且这一凸多边形的面积是最小的。">
+<meta property="og:site_name" content="xiaolin">
+<meta property="og:description" content="首先我们先看一个例子:    这个问题就是典型的凸包问题。先讲一下什么是凸包:凸包是一组点集中的子集,这一子集形成的凸多边形可以将点集中所有的点都围住,并且这一凸多边形的面积是最小的。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://x1aolin6.top/1.png">
 <meta property="og:image" content="http://x1aolin6.top/2.png">
-<meta property="og:updated_time" content="2018-06-10T11:22:49.327Z">
+<meta property="og:updated_time" content="2018-07-06T16:14:16.548Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="计算几何之寻找凸包">
-<meta name="twitter:description" content="首先我们先看一个例子:这个问题就是典型的凸包问题。先讲一下什么是凸包:凸包是一组点集中的子集,这一子集形成的凸多边形可以将点集中所有的点都围住,并且这一凸多边形的面积是最小的。">
+<meta name="twitter:description" content="首先我们先看一个例子:    这个问题就是典型的凸包问题。先讲一下什么是凸包:凸包是一组点集中的子集,这一子集形成的凸多边形可以将点集中所有的点都围住,并且这一凸多边形的面积是最小的。">
 <meta name="twitter:image" content="http://x1aolin6.top/1.png">
 
 
@@ -129,7 +129,7 @@
 
 
 
-  <title>计算几何之寻找凸包 | 小林的个人小屋</title>
+  <title>计算几何之寻找凸包 | xiaolin</title>
   
 
 
@@ -159,7 +159,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">小林的个人小屋</span>
+        <span class="site-title">xiaolin</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -299,7 +299,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小林的个人小屋">
+      <meta itemprop="name" content="xiaolin">
     </span>
 
     
@@ -431,7 +431,9 @@
       
 
       
-        <p>首先我们先看一个例子:<br><img src="/1.png" alt="地主圈地"><br>这个问题就是典型的凸包问题。先讲一下什么是<strong>凸包</strong>:<br><em>凸包是一组点集中的子集,这一子集形成的凸多边形可以将点集中所有的点都围住,并且这一凸多边形的面积是最小的。</em></p>
+        <p>首先我们先看一个例子:  </p>
+<p><img src="/1.png" alt="地主圈地"></p>
+<p>这个问题就是典型的凸包问题。先讲一下什么是<strong>凸包</strong>:<br><em>凸包是一组点集中的子集,这一子集形成的凸多边形可以将点集中所有的点都围住,并且这一凸多边形的面积是最小的。</em></p>
 <a id="more"></a>
 <p>显而易见，上述问题的求解就是<strong>把最外面的一圈点用折线圈起来</strong>，这样就是最好的结果。那么，怎么把这种思想体现到计算机算法中呢？其实有很多种解决方法，其中这里讲一个比较容易理解实现的算法:<strong>打包法</strong><br>具体算法如下:</p>
 <ul>
