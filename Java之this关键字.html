@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="x1aolin小屋" />
+  <meta name="keywords" content="Java类与对象," />
 
 
 
@@ -79,13 +79,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="x1aolin">
-<meta property="og:url" content="http://x1aolin6.top/archives/index.html">
+<meta name="description" content="我以前写过C++的this指针，和Java的没有太大区别，大家可以点进去看看。  this是Java的一个关键字，表示某个对象。this可以出现在实例方法和构造方法中，不可出现在类方法中^1。(大家看看上篇博客实例方法与类方法的区别应该能体会出来原因)。 在构造方法中使用this在构造方法中代表使用该构造方法所创建的对象。听起来有点绕，说白了就是代表哪个对象调用，this就代表谁，改变的数据也是">
+<meta name="keywords" content="Java类与对象">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java之this关键字">
+<meta property="og:url" content="http://x1aolin6.top/Java之this关键字.html">
 <meta property="og:site_name" content="x1aolin">
+<meta property="og:description" content="我以前写过C++的this指针，和Java的没有太大区别，大家可以点进去看看。  this是Java的一个关键字，表示某个对象。this可以出现在实例方法和构造方法中，不可出现在类方法中^1。(大家看看上篇博客实例方法与类方法的区别应该能体会出来原因)。 在构造方法中使用this在构造方法中代表使用该构造方法所创建的对象。听起来有点绕，说白了就是代表哪个对象调用，this就代表谁，改变的数据也是">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-06-12T16:12:06.219Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="x1aolin">
+<meta name="twitter:title" content="Java之this关键字">
+<meta name="twitter:description" content="我以前写过C++的this指针，和Java的没有太大区别，大家可以点进去看看。  this是Java的一个关键字，表示某个对象。this可以出现在实例方法和构造方法中，不可出现在类方法中^1。(大家看看上篇博客实例方法与类方法的区别应该能体会出来原因)。 在构造方法中使用this在构造方法中代表使用该构造方法所创建的对象。听起来有点绕，说白了就是代表哪个对象调用，this就代表谁，改变的数据也是">
 
 
 
@@ -115,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://x1aolin6.top/archives/"/>
+  <link rel="canonical" href="http://x1aolin6.top/Java之this关键字.html"/>
 
 
 
 
 
-  <title>归档 | x1aolin</title>
+  <title>Java之this关键字 | x1aolin</title>
   
 
 
@@ -140,7 +145,7 @@
     
   
 
-  <div class="container sidebar-position-right page-archive">
+  <div class="container sidebar-position-right page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -268,411 +273,270 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://x1aolin6.top/Java之this关键字.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="x1aolin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/1.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="x1aolin">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">Java之this关键字</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-12T17:24:20+08:00">
+                2018-06-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 23 篇日志。 继续努力。
-      </span>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java入门教程/" itemprop="url" rel="index">
+                    <span itemprop="name">Java入门教程</span>
+                  </a>
+                </span>
 
-      
-
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2018">2018</h1>
-          </div>
-        
-        
 
-        
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/Java之this关键字.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/Java之this关键字.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
+          
+             <span id="/Java之this关键字.html" class="leancloud_visitors" data-flag-title="Java之this关键字">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/Java访问权限.html" itemprop="url">
+          
+
+          
+            <div class="post-wordcount">
               
-                <span itemprop="name">Java访问权限</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  484
+                </span>
               
-            </a>
-        
-      </h2>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-06-14T00:23:18+08:00"
-              content="2018-06-14" >
-          06-14
-        </time>
-      </div>
+              
+                <span class="post-meta-divider">|</span>
+              
 
-    </header>
-  </article>
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  2
+                </span>
+              
+            </div>
+          
 
+          
 
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/Java包和import语句.html" itemprop="url">
-              
-                <span itemprop="name">Java包和import语句</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-06-12T23:02:08+08:00"
-              content="2018-06-12" >
-          06-12
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/Java之this关键字.html" itemprop="url">
-              
-                <span itemprop="name">Java之this关键字</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-06-12T17:24:20+08:00"
-              content="2018-06-12" >
-          06-12
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <blockquote>
+<p>我以前写过<a href="http://x1aolin6.top/2018/05/17/Cpp%E4%B9%8BThis%E6%8C%87%E9%92%88/">C++的this指针</a>，和Java的没有太大区别，大家可以点进去看看。</p>
+</blockquote>
+<p>this是Java的一个关键字，表示某个对象。this可以出现在实例方法和构造方法中，不可出现在类方法中<a href="因为类方法可以通过类名直接调用，这时，可能还没有任何对象产生。">^1</a>。(大家看看上篇博客<a href="http://x1aolin6.top/2018/06/11/Java%E4%B9%8Bstatic%E5%85%B3%E9%94%AE%E5%AD%97/">实例方法与类方法的区别</a>应该能体会出来原因)。</p>
+<h3 id="在构造方法中使用this"><a href="#在构造方法中使用this" class="headerlink" title="在构造方法中使用this"></a>在构造方法中使用this</h3><p>在构造方法中代表使用该构造方法所创建的对象。听起来有点绕，说白了就是代表哪个对象调用，this就代表谁，改变的数据也是当前对象所“拥有统领”的变量。</p>
+<blockquote>
+<p>如果没有要求就不给例子了哈。^_^</p>
+</blockquote>
+<a id="more"></a>
+<h3 id="在实例方法中使用this"><a href="#在实例方法中使用this" class="headerlink" title="在实例方法中使用this"></a>在实例方法中使用this</h3><p>实例方法只能通过对象来调用，所以，当this关键字出现在实例方法中时，代表正在调用该方法的当前对象。  </p>
+<h5 id="1-当实例成员变量在实例方法中出现时，默认格式如下"><a href="#1-当实例成员变量在实例方法中出现时，默认格式如下" class="headerlink" title="1.当实例成员变量在实例方法中出现时，默认格式如下:"></a>1.当实例成员变量在实例方法中出现时，默认格式如下:</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.成员变量  <span class="comment">//通常情况下this可省略</span></span><br></pre></td></tr></table></figure>
+<h5 id="2-当static成员变量在实例方法中出现时，默认格式如下"><a href="#2-当static成员变量在实例方法中出现时，默认格式如下" class="headerlink" title="2.当static成员变量在实例方法中出现时，默认格式如下:"></a>2.当static成员变量在实例方法中出现时，默认格式如下:</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">类名.成员变量 <span class="comment">//通常情况下类名可省略</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><em>不通常情况 : 当实例成员变量的名字和局部变量的名字相同时就不可省略了。</em></p>
+</blockquote>
+<h5 id="3-类的实例方法可以调用类的其他方法"><a href="#3-类的实例方法可以调用类的其他方法" class="headerlink" title="3.类的实例方法可以调用类的其他方法"></a>3.类的实例方法可以调用类的其他方法</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.方法  <span class="comment">//通常情况下this可省略</span></span><br></pre></td></tr></table></figure>
+<h5 id="4-对于类方法调用的默认格式如下"><a href="#4-对于类方法调用的默认格式如下" class="headerlink" title="4.对于类方法调用的默认格式如下:"></a>4.对于类方法调用的默认格式如下:</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">类名.方法 <span class="comment">//通常情况下类名可省略</span></span><br></pre></td></tr></table></figure>
+<p>举个栗子(代码不可单独运行)：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> x;</span><br><span class="line">	<span class="keyword">static</span> <span class="keyword">int</span> y;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">a</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.x = <span class="number">100</span>;  <span class="comment">//this可省略</span></span><br><span class="line">		A.y = <span class="number">200</span>;     <span class="comment">//A可省略</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">b</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.c();	   <span class="comment">//this可省略</span></span><br><span class="line">		A.d();		   <span class="comment">//A可省略</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">c</span><span class="params">()</span></span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"c"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">d</span><span class="params">()</span></span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"d"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/Java之static关键字.html" itemprop="url">
-              
-                <span itemprop="name">Java之static关键字</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-06-11T21:10:11+08:00"
-              content="2018-06-11" >
-          06-11
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/Java参数传值.html" itemprop="url">
-              
-                <span itemprop="name">Java参数传值</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-06-11T12:20:53+08:00"
-              content="2018-06-11" >
-          06-11
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/有向面积.html" itemprop="url">
-              
-                <span itemprop="name">有向面积</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-06-10T17:06:03+08:00"
-              content="2018-06-10" >
-          06-10
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/计算几何之寻找凸包.html" itemprop="url">
-              
-                <span itemprop="name">计算几何之寻找凸包</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-06-09T14:17:26+08:00"
-              content="2018-06-09" >
-          06-09
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/Java类与对象二.html" itemprop="url">
-              
-                <span itemprop="name">Java对象基础</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-06-04T21:23:32+08:00"
-              content="2018-06-04" >
-          06-04
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/Java类与对象一.html" itemprop="url">
-              
-                <span itemprop="name">Java类基础知识</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-06-02T17:28:33+08:00"
-              content="2018-06-02" >
-          06-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/Java运算符、表达式和语句二.html" itemprop="url">
-              
-                <span itemprop="name">Java语句基础</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-06-01T16:56:05+08:00"
-              content="2018-06-01" >
-          06-01
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>您只要分享给你的小伙伴就够啦！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/11.jpg" alt="x1aolin 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/22.jpg" alt="x1aolin 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Java类与对象/" rel="tag"># Java类与对象</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/Java之static关键字.html" rel="next" title="Java之static关键字">
+                <i class="fa fa-chevron-left"></i> Java之static关键字
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/Java包和import语句.html" rel="prev" title="Java包和import语句">
+                Java包和import语句 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><a class="extend next" rel="next" href="/archives/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
+  </article>
 
 
+      <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -680,6 +544,13 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -700,8 +571,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -783,6 +663,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#在构造方法中使用this"><span class="nav-number">1.</span> <span class="nav-text">在构造方法中使用this</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在实例方法中使用this"><span class="nav-number">2.</span> <span class="nav-text">在实例方法中使用this</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-当实例成员变量在实例方法中出现时，默认格式如下"><span class="nav-number">2.0.1.</span> <span class="nav-text">1.当实例成员变量在实例方法中出现时，默认格式如下:</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-当static成员变量在实例方法中出现时，默认格式如下"><span class="nav-number">2.0.2.</span> <span class="nav-text">2.当static成员变量在实例方法中出现时，默认格式如下:</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-类的实例方法可以调用类的其他方法"><span class="nav-number">2.0.3.</span> <span class="nav-text">3.类的实例方法可以调用类的其他方法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-对于类方法调用的默认格式如下"><span class="nav-number">2.0.4.</span> <span class="nav-text">4.对于类方法调用的默认格式如下:</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -945,6 +841,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
