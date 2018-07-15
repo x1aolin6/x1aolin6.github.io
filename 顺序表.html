@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="定义线性表L是n个元素e1,e2,e3, …en,组成的有限序列，记作L = (e1,e2,e3, …en),其中n(n&amp;gt;=0)为表长度；当n = 0时，记做L=()。">
+<meta name="description" content="定义线性表L是n个元素e1,e2,e3, …en,组成的有限序列，记作L = (e1,e2,e3, …en),其中n(n&amp;gt;=0)为表长度；当n = 0时，记做L=()。 非空线性表的特点:  有一个唯一的“第一个”数据元素。 有一个唯一的“最后一个”数据元素。 除头元素外，表中其他元素有且只有一个直接前驱。 除尾元素外，表中其他元素有且只有一个直接后继。  顺序表 附一个typedef用法的">
 <meta name="keywords" content="线性表,顺序表">
 <meta property="og:type" content="article">
 <meta property="og:title" content="顺序表">
 <meta property="og:url" content="http://x1aolin6.top/顺序表.html">
 <meta property="og:site_name" content="xiaolin">
-<meta property="og:description" content="定义线性表L是n个元素e1,e2,e3, …en,组成的有限序列，记作L = (e1,e2,e3, …en),其中n(n&amp;gt;=0)为表长度；当n = 0时，记做L=()。">
+<meta property="og:description" content="定义线性表L是n个元素e1,e2,e3, …en,组成的有限序列，记作L = (e1,e2,e3, …en),其中n(n&amp;gt;=0)为表长度；当n = 0时，记做L=()。 非空线性表的特点:  有一个唯一的“第一个”数据元素。 有一个唯一的“最后一个”数据元素。 除头元素外，表中其他元素有且只有一个直接前驱。 除尾元素外，表中其他元素有且只有一个直接后继。  顺序表 附一个typedef用法的">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-15T09:23:55.780Z">
+<meta property="og:updated_time" content="2018-07-15T23:37:45.117Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="顺序表">
-<meta name="twitter:description" content="定义线性表L是n个元素e1,e2,e3, …en,组成的有限序列，记作L = (e1,e2,e3, …en),其中n(n&amp;gt;=0)为表长度；当n = 0时，记做L=()。">
+<meta name="twitter:description" content="定义线性表L是n个元素e1,e2,e3, …en,组成的有限序列，记作L = (e1,e2,e3, …en),其中n(n&amp;gt;=0)为表长度；当n = 0时，记做L=()。 非空线性表的特点:  有一个唯一的“第一个”数据元素。 有一个唯一的“最后一个”数据元素。 除头元素外，表中其他元素有且只有一个直接前驱。 除尾元素外，表中其他元素有且只有一个直接后继。  顺序表 附一个typedef用法的">
 
 
 
@@ -391,7 +391,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  44
+                  442
                 </span>
               
 
@@ -407,7 +407,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  2
                 </span>
               
             </div>
@@ -428,8 +428,26 @@
       
 
       
-        <h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><p>线性表L是n个元素<br>e<sub>1</sub>,e<sub>2</sub>,e<sub>3</sub>, …e<sub>n</sub>,<br>组成的有限序列，记作L = (e<sub>1</sub>,e<sub>2</sub>,e<sub>3</sub>, …e<sub>n</sub>),其中n(n&gt;=0)为表长度；当n = 0时，记做L=()。</p>
-
+        <h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><p>线性表L是n个元素e<sub>1</sub>,e<sub>2</sub>,e<sub>3</sub>, …e<sub>n</sub>,组成的有限序列，记作L = (e<sub>1</sub>,e<sub>2</sub>,e<sub>3</sub>, …e<sub>n</sub>),其中n(n&gt;=0)为表长度；当n = 0时，记做L=()。</p>
+<p>非空线性表的特点:</p>
+<ul>
+<li>有一个唯一的“第一个”数据元素。</li>
+<li>有一个唯一的“最后一个”数据元素。</li>
+<li>除头元素外，表中其他元素有且只有一个直接前驱。</li>
+<li>除尾元素外，表中其他元素有且只有一个直接后继。</li>
+</ul>
+<h4 id="顺序表"><a href="#顺序表" class="headerlink" title="顺序表"></a>顺序表</h4><blockquote>
+<p>附一个typedef用法的博客：<a href="https://www.cnblogs.com/qyaizs/articles/2039101.html" target="_blank" rel="noopener">传送门</a>，下面开始正式说明。</p>
+</blockquote>
+<h5 id="顺序表定义"><a href="#顺序表定义" class="headerlink" title="顺序表定义"></a>顺序表定义</h5><p><strong>顺序存储方式：</strong> 假设在计算机中有一个足够大的连续的存储空间，则可将表中元素按照其逻辑次序依次存储到这一存储区，由此而得到的线性表称为 <strong>顺序表</strong>。</p>
+<p><strong>具体实现</strong>:<br>使用数组来对应连续的存储空间，如<code>data[MAXLEN]</code>,另外用一个<code>int</code>类的变量来记录表的长度，和作为“路标”操作数组里的元素。</p>
+<p>C语言实现:<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAXLEN 100  <span class="comment">//最大长度设置</span></span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">sList</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	elementType data[MAXLEN];</span><br><span class="line">	<span class="keyword">int</span> listLen;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">sList</span> <span class="title">seqList</span>;</span> <span class="comment">//起别名，具体传送门</span></span><br></pre></td></tr></table></figure></p>
+<p>C++语言实现:<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAXLEN 100  <span class="comment">//最大长度设置</span></span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">seqList</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	elementType data[MAXLEN];</span><br><span class="line">	<span class="keyword">int</span> listLen;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>说明: 代码中的<code>elementType</code>在使用时可用<code>tepedef</code>来指定为你所需要的类型。比如你想要一个double类型的数组，用来存放学生的成绩，可以用<code>typedef double elementType</code>。这样做的目的就是使更加模板化，使用起来更加方便。</p>
+<h5 id="常用基本运算"><a href="#常用基本运算" class="headerlink" title="常用基本运算"></a>常用基本运算</h5><blockquote>
+<p>学会了常用的几个基本运算，再进行融会贯通即可。  </p>
+</blockquote>
+<h6 id="初始化运算的实现"><a href="#初始化运算的实现" class="headerlink" title="初始化运算的实现"></a>初始化运算的实现</h6>
       
     </div>
     
@@ -654,7 +672,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#定义"><span class="nav-number">1.</span> <span class="nav-text">定义</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#定义"><span class="nav-number">1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#顺序表"><span class="nav-number">2.</span> <span class="nav-text">顺序表</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#顺序表定义"><span class="nav-number">2.1.</span> <span class="nav-text">顺序表定义</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#常用基本运算"><span class="nav-number">2.2.</span> <span class="nav-text">常用基本运算</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#初始化运算的实现"><span class="nav-number">2.2.1.</span> <span class="nav-text">初始化运算的实现</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -688,7 +706,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">21.1k</span>
+    <span title="Site words total count">21.5k</span>
   
 </div>
 
