@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="xiaolin">
 <meta property="og:description" content="多态概述 什么是多态？  所谓多态，就是当发出一条命令的时候，不同的对象接收到同样的命令之后所做出的动作是不同的。用比较官方的话来讲，就是指相同对象收到不同消息或不同对象收到相同消息时产生不同的动作。 虚函数及实现原理虚函数 由virtual关键字修饰的函数称之为虚函数。  1.静态多态(早绑定)123456class Rect&amp;#123;public:	int calcArea(int widt">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-20T05:59:27.830Z">
+<meta property="og:updated_time" content="2018-07-20T08:50:22.738Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="cpp多态篇">
 <meta name="twitter:description" content="多态概述 什么是多态？  所谓多态，就是当发出一条命令的时候，不同的对象接收到同样的命令之后所做出的动作是不同的。用比较官方的话来讲，就是指相同对象收到不同消息或不同对象收到相同消息时产生不同的动作。 虚函数及实现原理虚函数 由virtual关键字修饰的函数称之为虚函数。  1.静态多态(早绑定)123456class Rect&amp;#123;public:	int calcArea(int widt">
@@ -391,7 +391,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  688
+                  1,006
                 </span>
               
 
@@ -407,7 +407,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3
+                  4
                 </span>
               
             </div>
@@ -449,7 +449,24 @@
 <p><code>demo.h</code></p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"Circle.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"Rect.h"</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	Shape *s1 = <span class="keyword">new</span> Rect(<span class="number">3</span>,<span class="number">6</span>);</span><br><span class="line">	Shape *s2 = <span class="keyword">new</span> Circle(<span class="number">5</span>);</span><br><span class="line"></span><br><span class="line">	s1-&gt;calcArea();</span><br><span class="line">	s2-&gt;calcArea();</span><br><span class="line"></span><br><span class="line">	<span class="keyword">delete</span> s1;</span><br><span class="line">	<span class="keyword">delete</span> s2;</span><br><span class="line"></span><br><span class="line">	s1 = <span class="literal">NULL</span>;</span><br><span class="line">	s2 = <span class="literal">NULL</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>运行结果如下，请自行体会(代码可复制试验)<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">x1aolin@x1aolin-E402NA:~/桌面/虚函数$ g++ demo.cpp Circle.h Rect.h Shape.h -o o</span><br><span class="line">x1aolin@x1aolin-E402NA:~/桌面/虚函数$ ./o</span><br><span class="line">Shape()</span><br><span class="line">Rect()</span><br><span class="line">Shape()</span><br><span class="line">Circle()</span><br><span class="line">Rect--&gt;caleArea()</span><br><span class="line">Circle--&gt;calcArea()</span><br><span class="line">~Shape()</span><br><span class="line">~Shape()</span><br></pre></td></tr></table></figure></p>
-<h4 id="虚析构函数"><a href="#虚析构函数" class="headerlink" title="虚析构函数"></a>虚析构函数</h4><p>在上面的代码中……</p>
+<h4 id="虚析构函数"><a href="#虚析构函数" class="headerlink" title="虚析构函数"></a>虚析构函数</h4><blockquote>
+<p>从定义上理解很简单，就是 virtual -&gt;析构函数。</p>
+</blockquote>
+<p>在上面的代码中我们详细说明了什么是动态多态，确实给我们处理问题又带来了新的方法。但是从上面的运行结果来看，还是存在一定的问题的，那就是<strong>内存泄漏</strong>。通过运行结果可以明显看出，在最后释放内存时，只是运行了父类的析构函数，而没有运行子类的析构函数，因此，如果在子类的构造函数中申请了一段内存的话，那么就有可能造成泄露。那么，该如何解决这个问题呢？</p>
+<p>这就用到了本节中的虚析构函数，只需要把<code>Shape.h</code>文件修改为:<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Shape</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	Shape();</span><br><span class="line">	<span class="function"><span class="keyword">virtual</span> <span class="keyword">double</span> <span class="title">calcArea</span><span class="params">()</span></span>;</span><br><span class="line">	<span class="keyword">virtual</span> ~Shape();</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<h5 id="virtual使用限制"><a href="#virtual使用限制" class="headerlink" title="virtual使用限制:"></a>virtual使用限制:</h5><ul>
+<li><p>普通函数不能是虚函数。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">virtual</span> <span class="keyword">int</span> <span class="title">test</span><span class="params">()</span><span class="comment">//FALSE</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">&#125;;<span class="comment">//必须为某个类的成员函数，不能是一个全局函数</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>静态成员函数不能是虚函数</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> <span class="class"><span class="keyword">class</span> <span class="title">Animal</span></span></span><br><span class="line"><span class="class"> &#123;</span></span><br><span class="line"> <span class="keyword">public</span>:</span><br><span class="line"><span class="function"><span class="keyword">virtual</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">ll</span><span class="params">()</span></span>;  <span class="comment">//FALSE</span></span><br><span class="line"> &#125;;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>内联函数不能是虚函数</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> <span class="class"><span class="keyword">class</span> <span class="title">AA</span></span></span><br><span class="line"><span class="class"> &#123;</span></span><br><span class="line"> <span class="keyword">public</span>:</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">virtual</span> <span class="keyword">int</span> <span class="title">a</span><span class="params">()</span></span>;  <span class="comment">//FALSE 这样写计算机会忽略掉inline效应</span></span><br><span class="line"> &#125;;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>构造函数不能是虚函数</p>
+</li>
+</ul>
 
       
     </div>
@@ -679,7 +696,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#多态概述"><span class="nav-number">1.</span> <span class="nav-text">多态概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#虚函数及实现原理"><span class="nav-number">2.</span> <span class="nav-text">虚函数及实现原理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#虚函数"><span class="nav-number">2.1.</span> <span class="nav-text">虚函数</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-静态多态-早绑定"><span class="nav-number">2.1.1.</span> <span class="nav-text">1.静态多态(早绑定)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-动态多态-晚绑定"><span class="nav-number">2.1.2.</span> <span class="nav-text">2.动态多态(晚绑定)</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#虚析构函数"><span class="nav-number">2.2.</span> <span class="nav-text">虚析构函数</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#多态概述"><span class="nav-number">1.</span> <span class="nav-text">多态概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#虚函数及实现原理"><span class="nav-number">2.</span> <span class="nav-text">虚函数及实现原理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#虚函数"><span class="nav-number">2.1.</span> <span class="nav-text">虚函数</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-静态多态-早绑定"><span class="nav-number">2.1.1.</span> <span class="nav-text">1.静态多态(早绑定)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-动态多态-晚绑定"><span class="nav-number">2.1.2.</span> <span class="nav-text">2.动态多态(晚绑定)</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#虚析构函数"><span class="nav-number">2.2.</span> <span class="nav-text">虚析构函数</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#virtual使用限制"><span class="nav-number">2.2.1.</span> <span class="nav-text">virtual使用限制:</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -713,7 +730,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">24.7k</span>
+    <span title="Site words total count">25.0k</span>
   
 </div>
 
