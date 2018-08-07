@@ -1943,7 +1943,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #9af785;
+  background: #3cff79;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3112,5 +3112,6 @@ pre .javascript .function {
   }
 }
 body {
-  background: url("/images/beijing.jpg");
+  background: url("/images/backGround.jpg");
+  background-attachment: fixed;
 }
