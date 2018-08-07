@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[链表]]></title>
+    <url>%2F%E9%93%BE%E8%A1%A8.html</url>
+    <content type="text"><![CDATA[看了顺序表的相关介绍,在顺序表中插入和删除一个元素时，在等概论的情况下，需要移动表中约一般的元素。此外，顺序表需要使用连续的内存空间，且空间大小要按照最大需求进行分配，可能导致内存空间利用率不高。 为了解决这个问题，我们特别推出了链表这一数据结构。 链表概念链表是使用不连续的或者连续的存储空间来存放线性表的数据结构。 实现方法在每个数据元素后面附加一个地址域(指针域)，用来存放当前元素的直接后继地址。这个由数据域和指针域形成的结构作为一个整体，叫做结点。 假设要在表L中的第i个]]></content>
+      <categories>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>线性表</tag>
+        <tag>链表</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[数据结构_队列]]></title>
     <url>%2F%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%98%9F%E5%88%97.html</url>
-    <content type="text"><![CDATA[lll]]></content>
+    <content type="text"><![CDATA[队列原理 所谓队列，从特点上来讲，就是一个先入先出的数据模型。即FIFO: first in first out 最前面的元素称之为队头，最后面的元素称之为队尾。从形式上来说，队列分为两种:一种称之为“普通队列”，另一种称之为“环形队列”。]]></content>
       <categories>
         <category>数据结构</category>
       </categories>

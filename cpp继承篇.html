@@ -83,7 +83,7 @@
 <meta name="keywords" content="C++,cpp继承">
 <meta property="og:type" content="article">
 <meta property="og:title" content="cpp继承篇">
-<meta property="og:url" content="http://x1aolin6.top/cpp继承篇.html">
+<meta property="og:url" content="http://www.x1aolin6.top/cpp继承篇.html">
 <meta property="og:site_name" content="xiaolin">
 <meta property="og:description" content="继承 视频链接:https://www.imooc.com/video/8701  定义通过继承机制，可以利用已有的数据类型来定义新的数据类型。所定义的新的数据类型不仅拥有新定义的成员，而且还同时拥有旧的成员。我们称已存在的用来派生新类的类为基类，又称为父类。由已存在的类派生出的新类称为派生类，又称为子类。 为什么要使用继承?1、继承可以减少重复的代码。比如父类已经提供的方法，子类可以直接使用，不">
 <meta property="og:locale" content="zh-Hans">
@@ -120,7 +120,7 @@
 
 
 
-  <link rel="canonical" href="http://x1aolin6.top/cpp继承篇.html"/>
+  <link rel="canonical" href="http://www.x1aolin6.top/cpp继承篇.html"/>
 
 
 
@@ -287,7 +287,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://x1aolin6.top/cpp继承篇.html">
+    <link itemprop="mainEntityOfPage" href="http://www.x1aolin6.top/cpp继承篇.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="x1aolin">
@@ -541,7 +541,7 @@
 <h4 id="IS-A"><a href="#IS-A" class="headerlink" title="IS A"></a>IS A</h4><p>类似于Java当中的上转型对象，在C++当中，派生类的对象也可以赋值给基类。当然，基类的指针也可以指向派生类的对象。<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//基于上面的代码,Person类是Soldier的父类。</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	Soldier s1;</span><br><span class="line">	Person p1 = s1;    <span class="comment">//True</span></span><br><span class="line">	Person *p2 = &amp;s1;  <span class="comment">//True</span></span><br><span class="line"></span><br><span class="line">	s1 = p1;</span><br><span class="line">	Soldier *s2 = &amp;p1;  <span class="comment">//False</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>当我们用子类的对象向父类的对象赋值时，其本质就是将子类当中从父类继承下来的数据成员赋值给父类的对象，子类当中的其他的数据此时就会被截断。其中，实例化对象能够调用的成员函数依旧是父类当中的成员函数。</p>
 <p><strong>虚的析构函数 ：</strong> 写成<code>virtual ~Person()</code>，这样在释放基类的指针时就会先执行子类的析构函数，避免内存泄漏。</p>
-<p>想要了解更详细的内容，请看博客<a href="http://www.x1aolin6.top/cpp%E5%A4%9A%E6%80%81%E7%AF%87.html" target="_blank" rel="noopener">cpp多态篇</a></p>
+<p>想要了解更详细的内容，请看博客<a href="http://www.x1aolin6.top/cpp%E5%A4%9A%E6%80%81%E7%AF%87.html">cpp多态篇</a></p>
 <h3 id="多继承与多重继承"><a href="#多继承与多重继承" class="headerlink" title="多继承与多重继承"></a>多继承与多重继承</h3><blockquote>
 <p>视频链接:<a href="https://www.imooc.com/video/8716" target="_blank" rel="noopener">https://www.imooc.com/video/8716</a></p>
 </blockquote>
@@ -711,7 +711,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">27</span>
+                  <span class="site-state-item-count">28</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -733,7 +733,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -818,7 +818,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">25.0k</span>
+    <span title="Site words total count">25.3k</span>
   
 </div>
 

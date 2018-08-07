@@ -83,7 +83,7 @@
 <meta name="keywords" content="C++">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Cpp之const的用法">
-<meta property="og:url" content="http://x1aolin6.top/Cpp之const的用法.html">
+<meta property="og:url" content="http://www.x1aolin6.top/Cpp之const的用法.html">
 <meta property="og:site_name" content="xiaolin">
 <meta property="og:description" content="关于const的有关知识今天先讲这些，等日后再进行补充……Tips:最后有视频推荐链接，不喜欢读文章可以看看视频。  控制变化的const 1.const与基本的数据类型如:1const int x = 3 //常量    变量名 储存地址 存储内容     x &amp;amp;x 3  固定不变">
 <meta property="og:locale" content="zh-Hans">
@@ -120,7 +120,7 @@
 
 
 
-  <link rel="canonical" href="http://x1aolin6.top/Cpp之const的用法.html"/>
+  <link rel="canonical" href="http://www.x1aolin6.top/Cpp之const的用法.html"/>
 
 
 
@@ -287,7 +287,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://x1aolin6.top/Cpp之const的用法.html">
+    <link itemprop="mainEntityOfPage" href="http://www.x1aolin6.top/Cpp之const的用法.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="x1aolin">
@@ -539,7 +539,7 @@
 <blockquote>
 <p><em>!!! 常成员函数中不可以修改数据成员的值</em>。</p>
 </blockquote>
-<p>在上一次的<a href="http://x1aolin6.top/2018/05/17/Cpp-%E5%B0%81%E8%A3%85%E7%AF%87/">博客:this的用法</a>中已经详细介绍了关于this应该如何运用，这里不在赘述。<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> Coordinate::changeX() <span class="keyword">const</span></span><br><span class="line">&#123;</span><br><span class="line">    m_ix = <span class="number">10</span>; <span class="comment">//False 这是不被允许的，原因下面有。</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>在上一次的<a href="http://x1aolin6.top/2018/05/17/Cpp-%E5%B0%81%E8%A3%85%E7%AF%87/" target="_blank" rel="noopener">博客:this的用法</a>中已经详细介绍了关于this应该如何运用，这里不在赘述。<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> Coordinate::changeX() <span class="keyword">const</span></span><br><span class="line">&#123;</span><br><span class="line">    m_ix = <span class="number">10</span>; <span class="comment">//False 这是不被允许的，原因下面有。</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>其实上面的代码可以理解为:<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">changeX</span><span class="params">(<span class="keyword">const</span> Coordinate *<span class="keyword">this</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">this</span>-&gt;m_ix = <span class="number">10</span>; <span class="comment">//上面也提到常指针是不可以改变的，所以不被允许。</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p><strong>定义常成员函数的方法</strong>:<br>在.h文件中，在普通成员函数声明后面加上 const ，然后在其对应的.cpp文件定义<br>中的对应定义函数后面加上 const 后面。注意在函数括号后面加一个小空格，防止编译错误。</p>
 <blockquote>
@@ -716,7 +716,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">27</span>
+                  <span class="site-state-item-count">28</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -738,7 +738,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -823,7 +823,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">25.0k</span>
+    <span title="Site words total count">25.3k</span>
   
 </div>
 

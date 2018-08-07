@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Java类与对象," />
+  <meta name="keywords" content="线性表,链表," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="面向对象语言特性众所周知，Java是一门面向对象的编程语言，它的源程序由若干个类组成，源文件时拓展名为.java的文本文件。下面给出面向对象编程的特性:    1.封装性。即将数据和对数据的操作封装在一起，通过抽象，从具体的实例中抽取共同的性质形成一般的概念。比如类的概念。 2.继承性。子类可以继承父类的属性和功能，既继承了父类所有的数据和数据上的操作，同时又可以添加子类独有的数据和数据上的操作。">
-<meta name="keywords" content="Java类与对象">
+<meta name="description" content="看了顺序表的相关介绍,在顺序表中插入和删除一个元素时，在等概论的情况下，需要移动表中约一般的元素。此外，顺序表需要使用连续的内存空间，且空间大小要按照最大需求进行分配，可能导致内存空间利用率不高。  为了解决这个问题，我们特别推出了链表这一数据结构。 链表概念链表是使用不连续的或者连续的存储空间来存放线性表的数据结构。 实现方法在每个数据元素后面附加一个地址域(指针域)，用来存放当前元素的直接后">
+<meta name="keywords" content="线性表,链表">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java类基础知识">
-<meta property="og:url" content="http://www.x1aolin6.top/Java类与对象一.html">
+<meta property="og:title" content="链表">
+<meta property="og:url" content="http://www.x1aolin6.top/链表.html">
 <meta property="og:site_name" content="xiaolin">
-<meta property="og:description" content="面向对象语言特性众所周知，Java是一门面向对象的编程语言，它的源程序由若干个类组成，源文件时拓展名为.java的文本文件。下面给出面向对象编程的特性:    1.封装性。即将数据和对数据的操作封装在一起，通过抽象，从具体的实例中抽取共同的性质形成一般的概念。比如类的概念。 2.继承性。子类可以继承父类的属性和功能，既继承了父类所有的数据和数据上的操作，同时又可以添加子类独有的数据和数据上的操作。">
+<meta property="og:description" content="看了顺序表的相关介绍,在顺序表中插入和删除一个元素时，在等概论的情况下，需要移动表中约一般的元素。此外，顺序表需要使用连续的内存空间，且空间大小要按照最大需求进行分配，可能导致内存空间利用率不高。  为了解决这个问题，我们特别推出了链表这一数据结构。 链表概念链表是使用不连续的或者连续的存储空间来存放线性表的数据结构。 实现方法在每个数据元素后面附加一个地址域(指针域)，用来存放当前元素的直接后">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-27T08:03:47.897Z">
+<meta property="og:updated_time" content="2018-08-07T10:12:40.153Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java类基础知识">
-<meta name="twitter:description" content="面向对象语言特性众所周知，Java是一门面向对象的编程语言，它的源程序由若干个类组成，源文件时拓展名为.java的文本文件。下面给出面向对象编程的特性:    1.封装性。即将数据和对数据的操作封装在一起，通过抽象，从具体的实例中抽取共同的性质形成一般的概念。比如类的概念。 2.继承性。子类可以继承父类的属性和功能，既继承了父类所有的数据和数据上的操作，同时又可以添加子类独有的数据和数据上的操作。">
+<meta name="twitter:title" content="链表">
+<meta name="twitter:description" content="看了顺序表的相关介绍,在顺序表中插入和删除一个元素时，在等概论的情况下，需要移动表中约一般的元素。此外，顺序表需要使用连续的内存空间，且空间大小要按照最大需求进行分配，可能导致内存空间利用率不高。  为了解决这个问题，我们特别推出了链表这一数据结构。 链表概念链表是使用不连续的或者连续的存储空间来存放线性表的数据结构。 实现方法在每个数据元素后面附加一个地址域(指针域)，用来存放当前元素的直接后">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://www.x1aolin6.top/Java类与对象一.html"/>
+  <link rel="canonical" href="http://www.x1aolin6.top/链表.html"/>
 
 
 
 
 
-  <title>Java类基础知识 | xiaolin</title>
+  <title>链表 | xiaolin</title>
   
 
 
@@ -287,7 +287,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.x1aolin6.top/Java类与对象一.html">
+    <link itemprop="mainEntityOfPage" href="http://www.x1aolin6.top/链表.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="x1aolin">
@@ -304,7 +304,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Java类基础知识</h1>
+          <h1 class="post-title" itemprop="name headline">链表</h1>
         
 
         <div class="post-meta">
@@ -316,8 +316,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-02T17:28:33+08:00">
-                2018-06-02
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-07T17:43:40+08:00">
+                2018-08-07
               </time>
             
 
@@ -339,8 +339,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java入门教程/" itemprop="url" rel="index">
-                    <span itemprop="name">Java入门教程</span>
+                  <a href="/categories/数据结构/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构</span>
                   </a>
                 </span>
 
@@ -357,8 +357,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/Java类与对象一.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/Java类与对象一.html" itemprop="commentCount"></span>
+                <a href="/链表.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/链表.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -366,7 +366,7 @@
 
           
           
-             <span id="/Java类与对象一.html" class="leancloud_visitors" data-flag-title="Java类基础知识">
+             <span id="/链表.html" class="leancloud_visitors" data-flag-title="链表">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -391,7 +391,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2,229
+                  219
                 </span>
               
 
@@ -407,7 +407,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  9
+                  1
                 </span>
               
             </div>
@@ -428,50 +428,13 @@
       
 
       
-        <h3 id="面向对象语言特性"><a href="#面向对象语言特性" class="headerlink" title="面向对象语言特性"></a>面向对象语言特性</h3><p>众所周知，Java是一门面向对象的编程语言，它的源程序由若干个类组成，源文件时拓展名为.java的文本文件。下面给出面向对象编程的特性:  </p>
-<ul>
-<li>1.封装性。即将数据和对数据的操作封装在一起，通过抽象，从具体的实例中抽取共同的性质形成一般的概念。比如类的概念。</li>
-<li>2.继承性。子类可以继承父类的属性和功能，既继承了父类所有的数据和数据上的操作，同时又可以添加子类独有的数据和数据上的操作。</li>
-<li>3.多态性。一种是操作名称的多态，既有多个操作具有相同的名字，但这些操作所接受的信息类型必须不同。另一种多态是和继承有关的多态，是指同一个操作被不同的类型对象调用时可能产生不同的行为。</li>
-</ul>
-<a id="more"></a>
-<h3 id="类的声明"><a href="#类的声明" class="headerlink" title="类的声明"></a>类的声明</h3><p>类是组成Java程 序的基本要素，类封装了一类对象的状态与方法，类是用来定义对象的模板。类的实现包括两个部分，即类的声明和类体，基本格式如下:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> 类名</span>&#123;			 <span class="comment">//类的声明</span></span><br><span class="line">	类体的内容		 <span class="comment">//类体</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p><em>类的声明注意事项</em> :<br>1.类的名字要符合<a href="http://x1aolin6.top/2018/05/23/Java%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B/" target="_blank" rel="noopener">标识符的规定</a>。(语法要求)<br>2.如果类名使用拉丁字母，那么类名的首字母使用大写字母。(不是语法要求但需要遵守)<br>3.类名最好容易识别，见名知意。(不是语法要求但需要遵守)  </p>
-<p><em>类体说明</em> :<br>1.类声明后的一对大括号{  }以及它们之间的内容成为类体，大括号之间的内容称为类体的内容。<br>2.类体由两个部分构成:一部分是<strong>变量的声明</strong>，用来<strong>刻画属性</strong>;另一部分是<strong>方法的定义</strong>，用来<strong>刻画功能</strong>。<br>举个栗子:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Trapezoid</span></span>&#123;</span><br><span class="line">	<span class="keyword">float</span> 上底,下底,高,laderArea;  <span class="comment">//变量声明，刻画属性</span></span><br><span class="line">	<span class="keyword">float</span> 计算面积()&#123;              <span class="comment">//方法定义，刻画功能</span></span><br><span class="line">		laderArea = (上底+下底)*高/<span class="number">2.0f</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">void</span> 修改高(<span class="keyword">float</span> h)&#123;</span><br><span class="line">		 高 = h;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h3 id="成员变量和局部变量"><a href="#成员变量和局部变量" class="headerlink" title="成员变量和局部变量"></a>成员变量和局部变量</h3><h4 id="变量的有效范围"><a href="#变量的有效范围" class="headerlink" title="变量的有效范围"></a>变量的有效范围</h4><blockquote>
-<p>在变量声明部分<strong>声明的变量</strong>被称为类的成员变量，在方法体中<strong>声明的变量</strong>和<strong>方法的参数</strong>被称为局部变量。当然，成员变量和局部变量的类型可以时Java中的任何一种数据类型。</p>
+        <blockquote>
+<p>看了<a href="http://www.x1aolin6.top/%E9%A1%BA%E5%BA%8F%E8%A1%A8.html">顺序表的相关介绍</a>,在顺序表中插入和删除一个元素时，在等概论的情况下，需要移动表中约一般的元素。此外，顺序表需要使用连续的内存空间，且空间大小要按照最大需求进行分配，可能导致内存空间利用率不高。</p>
 </blockquote>
-<ul>
-<li>成员变量在整个类内都有效，局部变量只在声明它的方法内有效。</li>
-<li>方法参数在整个方法内有效，方法内的局部变量从声明他的位置之后开始有效。</li>
-<li>如果局部变量的声明是在一个复合语句中，那么该有效范围的有效范围就是该复合语句，即仅在该复合语句中有效。</li>
-<li>如果局部变量的声明是在一个循环语句中，那么该局部变量的有效范围是该循环语句，即仅在循环语句中有效。<br>举个栗子:<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">A</span></span>&#123;</span><br><span class="line">   <span class="keyword">int</span> m = <span class="number">10</span>,sum = <span class="number">0</span>;     <span class="comment">//成员变量，在整个类中有效</span></span><br><span class="line">   <span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">()</span></span>&#123;</span><br><span class="line">      <span class="keyword">if</span>(m&gt;<span class="number">9</span>)&#123;</span><br><span class="line">		<span class="keyword">int</span> z = <span class="number">10</span>;        <span class="comment">//z仅仅在该复合语句中有效</span></span><br><span class="line">		z = <span class="number">2</span>*m + z;</span><br><span class="line">      &#125;</span><br><span class="line">	  <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i&lt;m;++i)&#123;</span><br><span class="line">	    sum += i;         <span class="comment">//i仅在该循环语句中有效</span></span><br><span class="line">	  &#125;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h4 id="实例变量与类变量"><a href="#实例变量与类变量" class="headerlink" title="实例变量与类变量"></a>实例变量与类变量</h4><p>在声明成员变量前，用关键词static给予修饰的称作类变量(静态变量)，否则称之为实例变量(对象变量)。<br>类变量是所有对象共有，其中一个对象将它的值改变，其他对象得到的就是改变后的结果；而实例变量则属于对象私有，某一个对象将其值改变，不影响其他对象。<br>举个栗子：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Dog</span></span>&#123;</span><br><span class="line">	<span class="keyword">float</span> x = <span class="number">0</span>;    <span class="comment">//实例变量</span></span><br><span class="line">	<span class="keyword">static</span> <span class="keyword">int</span> y = <span class="number">0</span>;  <span class="comment">//类变量(静态变量)</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">A</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">		Dog a1 = <span class="keyword">new</span> Dog();</span><br><span class="line">		Dog a2 = <span class="keyword">new</span> Dog();</span><br><span class="line">		a1.x = <span class="number">3.0f</span>;</span><br><span class="line">		a1.y = <span class="number">4</span>;	<span class="comment">//等同于 Dog.y = 4;</span></span><br><span class="line">		System.out.println(a2.y); <span class="comment">//结果为4</span></span><br><span class="line">		System.out.println(a2.x); <span class="comment">//结果为0		</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h4 id="成员的隐藏"><a href="#成员的隐藏" class="headerlink" title="成员的隐藏"></a>成员的隐藏</h4><p>如果局部变量的名字与成员变量的名字相同，则成员变量被隐藏，即这个成员变量在这个方法内失效。例如:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Tom</span></span>&#123;</span><br><span class="line">	 <span class="keyword">int</span> x = <span class="number">99</span>,y;</span><br><span class="line">	 <span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">()</span></span>&#123;</span><br><span class="line">	 <span class="keyword">int</span> x = <span class="number">3</span>;</span><br><span class="line">	 y = x; <span class="comment">//y得到的值为3，而不是99</span></span><br><span class="line">	 &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>如果仍希望在该方法中使用隐藏的成员变量，需要用到关键词this,比如这样:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Tom</span></span>&#123;</span><br><span class="line">	 <span class="keyword">int</span> x = <span class="number">99</span>,y;</span><br><span class="line">	 <span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">()</span></span>&#123;</span><br><span class="line">	 <span class="keyword">int</span> x = <span class="number">3</span>;</span><br><span class="line">	 y = <span class="keyword">this</span>.x; <span class="comment">//y得到的值为99,而不是3</span></span><br><span class="line">	 &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h4 id="变量书写风格"><a href="#变量书写风格" class="headerlink" title="变量书写风格"></a>变量书写风格</h4><p>虽然其中的一些要求不是语法要求，但是还是希望大家能够遵守，养成良好的变成习惯。</p>
-<ul>
-<li>一行只声明一个变量(便于给代码添加注释)。</li>
-<li>变量的名字符合标识符的规定。</li>
-<li>变量的名字见名知意，避免容易混淆的变量的名字，也尽量不要用a1,a2这种方式。</li>
-</ul>
-<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><p>最基本的方法包括方法名和方法的返回类型，并且很多方法声明中都给出了方法的参数，例如:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">float</span> <span class="title">area</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">float</span> b,...)</span></span>&#123;<span class="comment">//参数可以省略，根据需要填写</span></span><br><span class="line">	...<span class="comment">//方法体</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>方法的参数和返回类型可以是任意的Java数据类型，不需要返回类型时要用void。方法声明之后的一对大括号”{“、”}”以及之间的内容称为方法体。方法体内包括局部变量的声明和Java语句。写一个方法完全类似于C++里面的函数，只不过是面向对象语言中的称呼。</p>
-<h4 id="方法重载"><a href="#方法重载" class="headerlink" title="方法重载"></a>方法重载</h4><p>前面说过，Java中存在两种多态，即重载和重写，重写是和继承有关的多态，将在以后的博客中讨论。<br>方法重载是多态性的一种，所谓功能多态性，是指可以向功能传递不同的消息，以便让对象根据相应的消息产生相应的行为。<strong>方法重载</strong>的意思是，一个类中可以有多个方法具有相同的名字，但这些方法的参数必须不同(1.参数个数不同 2.参数类型不同)。<br>举个栗子:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Lin</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">float</span> <span class="title">getArea</span><span class="params">(<span class="keyword">float</span> r)</span></span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">3.14f</span>*r*r;</span><br><span class="line">	&#125; </span><br><span class="line">	<span class="function"><span class="keyword">double</span> <span class="title">getArea</span><span class="params">(<span class="keyword">float</span> x,<span class="keyword">float</span> y)</span></span>&#123;</span><br><span class="line">		<span class="keyword">return</span> x*y;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">float</span> <span class="title">getArea</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">float</span> y)</span></span>&#123;</span><br><span class="line">		<span class="keyword">return</span> x*y;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">double</span> <span class="title">getArea</span><span class="params">(<span class="keyword">float</span> x,<span class="keyword">float</span> y,<span class="keyword">float</span> z)</span></span>&#123;</span><br><span class="line">		<span class="keyword">return</span> (x*x+y*y+z*z)*<span class="number">2.0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p><strong>Notice:</strong> 方法的返回类型和参数的名字不参与比较，所以说，方法重载需要保证参数个数或者参数类型的不同！！！</p>
-<h4 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h4><p>和C++相同，当我们创建一个对象时，会调用构造方法进行初始化。构造方法也是一种特殊的方法， <em>它的名字必须与它所在类的名字完全相同</em> ,不需要写类型，也可以重载。<br>举个栗子:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Trapezoid</span></span>&#123;</span><br><span class="line">	<span class="keyword">float</span> 上底，下底，高;</span><br><span class="line">	Trapzoid()&#123;   <span class="comment">//构造方法</span></span><br><span class="line">		上底 = <span class="number">60</span>;</span><br><span class="line">		下底 = <span class="number">100</span>;</span><br><span class="line">		高  = <span class="number">20</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	Trapzoid(<span class="keyword">float</span> x,<span class="keyword">int</span> y,<span class="keyword">float</span> z)&#123;   <span class="comment">//构造方法</span></span><br><span class="line">		上底 = x;</span><br><span class="line">		下底 = y;</span><br><span class="line">		高 = z;</span><br><span class="line">	&#125;	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h4 id="实例方法与类方法"><a href="#实例方法与类方法" class="headerlink" title="实例方法与类方法"></a>实例方法与类方法</h4><p>和实例变量和类变量一样，类中的方法也分为实例方法和类方法。在声明方法时，方法类型前面不加关键字static修饰的是实例方法，加static的是类方法(静态方法)。<br>举个例子:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a;</span><br><span class="line">	<span class="function"><span class="keyword">float</span> <span class="title">b</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">float</span> y)</span></span>&#123;			<span class="comment">//实例方法</span></span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">speak</span><span class="params">(String s)</span></span>&#123;	<span class="comment">//类方法</span></span><br><span class="line">	</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>想了解实例方法和类方法的区别请点击：<a href="http://x1aolin6.top/2018/06/11/Java%E4%B9%8Bstatic%E5%85%B3%E9%94%AE%E5%AD%97/" target="_blank" rel="noopener">实例方法和类方法的区别传送门</a></p>
-<h3 id="Notice"><a href="#Notice" class="headerlink" title="Notice:"></a><em>Notice:</em></h3><ul>
-<li>对成员变量的操作只能放在方法中，方法可以对成员变量和该方法体中声明的局部变量进行操作。当然，在声明类的成员变量时可以同时赋予初值。</li>
-<li>实例方法既能对类变量操作也能对实例变量进行操作，而类方法只能对类变量进行操作。 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span></span>&#123;</span><br><span class="line">   <span class="keyword">int</span> a;		   <span class="comment">//实例变量</span></span><br><span class="line">   <span class="keyword">static</span> <span class="keyword">int</span> b;		<span class="comment">//类变量</span></span><br><span class="line">   <span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span>&#123;	 <span class="comment">//实例方法</span></span><br><span class="line">    a = x;		<span class="comment">//true</span></span><br><span class="line">          b = y;		<span class="comment">//true</span></span><br><span class="line">   &#125;</span><br><span class="line">   <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">g</span><span class="params">(<span class="keyword">int</span> z)</span></span>&#123;</span><br><span class="line">       b = <span class="number">23</span>;		 <span class="comment">//true</span></span><br><span class="line">      	a = z;		 <span class="comment">//False</span></span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ul>
-<li>一个类中的方法可以相互调用，实例方法可以调用该类中的其他方法；类中的类方法只能调用该类的类方法，不能调用实例方法。</li>
-</ul>
+<p>为了解决这个问题，我们特别推出了<strong>链表</strong>这一数据结构。</p>
+<h3 id="链表概念"><a href="#链表概念" class="headerlink" title="链表概念"></a>链表概念</h3><p>链表是使用不连续的或者连续的存储空间来存放线性表的数据结构。</p>
+<h3 id="实现方法"><a href="#实现方法" class="headerlink" title="实现方法"></a>实现方法</h3><p>在每个数据元素后面附加一个地址域(指针域)，用来存放当前元素的直接后继地址。<br>这个由数据域和指针域形成的结构作为一个整体，叫做<strong>结点</strong>。</p>
+<p>假设要在表L中的第i个</p>
 
       
     </div>
@@ -518,7 +481,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Java类与对象/" rel="tag"># Java类与对象</a>
+            <a href="/tags/线性表/" rel="tag"># 线性表</a>
+          
+            <a href="/tags/链表/" rel="tag"># 链表</a>
           
         </div>
       
@@ -531,8 +496,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Java运算符、表达式和语句二.html" rel="next" title="Java语句基础">
-                <i class="fa fa-chevron-left"></i> Java语句基础
+              <a href="/数据结构-队列.html" rel="next" title="数据结构_队列">
+                <i class="fa fa-chevron-left"></i> 数据结构_队列
               </a>
             
           </div>
@@ -540,10 +505,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/Java类与对象二.html" rel="prev" title="Java对象基础">
-                Java对象基础 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -699,7 +660,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#面向对象语言特性"><span class="nav-number">1.</span> <span class="nav-text">面向对象语言特性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#类的声明"><span class="nav-number">2.</span> <span class="nav-text">类的声明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#成员变量和局部变量"><span class="nav-number">3.</span> <span class="nav-text">成员变量和局部变量</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#变量的有效范围"><span class="nav-number">3.1.</span> <span class="nav-text">变量的有效范围</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例变量与类变量"><span class="nav-number">3.2.</span> <span class="nav-text">实例变量与类变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#成员的隐藏"><span class="nav-number">3.3.</span> <span class="nav-text">成员的隐藏</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#变量书写风格"><span class="nav-number">3.4.</span> <span class="nav-text">变量书写风格</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法"><span class="nav-number">4.</span> <span class="nav-text">方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#方法重载"><span class="nav-number">4.1.</span> <span class="nav-text">方法重载</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#构造方法"><span class="nav-number">4.2.</span> <span class="nav-text">构造方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例方法与类方法"><span class="nav-number">4.3.</span> <span class="nav-text">实例方法与类方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Notice"><span class="nav-number">5.</span> <span class="nav-text">Notice:</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#链表概念"><span class="nav-number">1.</span> <span class="nav-text">链表概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实现方法"><span class="nav-number">2.</span> <span class="nav-text">实现方法</span></a></li></ol></div>
             
 
           </div>
